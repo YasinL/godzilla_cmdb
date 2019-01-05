@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'godzilla_cmdb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'godzilla',
-        'USER':'godzilla',
-        'PASSWORD':'topwalk@@',
-        'HOST':'118.89.18.234',
+        'NAME': '',
+        'USER':'',
+        'PASSWORD':'',
+        'HOST':'',
         'PORT':'3306',
     }
 }
