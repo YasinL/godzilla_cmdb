@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <table>
+      <tr>
+          <td>菜单</td>
+          <td>菜单</td>
+      </tr>
+      {% for student_obj in students_obj %}
+      <tr>
+          <td>{{ student_obj.memuname }}</td>
+          <td>{{ student_obj.memulevel1 }}</td>
+      </tr>
+      {% endfor %}
+  </table>
+</body>
+</html>

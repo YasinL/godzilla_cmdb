@@ -1,0 +1,644 @@
+[2019-01-04 10:22:23,739 ERROR 93672 exception.py 135] - Internal Server Error: /godzilla/login
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\login.py", line 34, in login
+    return HttpResponseRedirect(settings.django_apps_url + '/index')
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\conf\__init__.py", line 57, in __getattr__
+    val = getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'django_apps_url'
+[2019-01-04 10:22:28,342 ERROR 93672 exception.py 135] - Internal Server Error: /godzilla/login
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\login.py", line 34, in login
+    return HttpResponseRedirect(settings.django_apps_url + '/index')
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\conf\__init__.py", line 57, in __getattr__
+    val = getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'django_apps_url'
+[2019-01-04 10:35:46,048 INFO 43496 Log.py 21] - D:/pythoncode/godzilla_cmdb/logs/py_cmdb.log
+[2019-01-04 10:39:30,779 ERROR 75468 exception.py 135] - Internal Server Error: /godzilla/login
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 507, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\login.py", line 35, in login
+    return render(request,'login.html')
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 509, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 571, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 11: 'static'. Did you forget to register or load this tag?
+[2019-01-04 10:39:32,656 WARNING 75468 base.py 152] - Not Found: /favicon.ico
+[2019-01-04 10:39:35,657 ERROR 75468 exception.py 135] - Internal Server Error: /godzilla/login
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 507, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\login.py", line 35, in login
+    return render(request,'login.html')
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 509, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 571, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 11: 'static'. Did you forget to register or load this tag?
+[2019-01-04 10:40:03,716 ERROR 75468 exception.py 135] - Internal Server Error: /godzilla/login
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 507, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\login.py", line 35, in login
+    return render(request,'login.html')
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 509, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 571, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 12: 'static'. Did you forget to register or load this tag?
+[2019-01-04 10:46:08,513 WARNING 75468 base.py 152] - Not Found: /godzilla/index.html
+[2019-01-04 10:46:26,041 WARNING 75468 base.py 152] - Not Found: /godzilla/index.html
+[2019-01-04 10:48:24,411 WARNING 92340 base.py 152] - Not Found: /godzilla/index.html
+[2019-01-04 10:49:10,154 WARNING 92340 base.py 152] - Not Found: /godzilla/index.html
+[2019-01-04 10:49:11,115 WARNING 92340 base.py 152] - Not Found: /favicon.ico
+[2019-01-04 10:52:00,446 WARNING 93696 csrf.py 160] - Forbidden (CSRF token missing or incorrect.): /godzilla/login
+[2019-01-04 10:52:02,575 WARNING 93696 base.py 152] - Not Found: /favicon.ico
+[2019-01-04 10:53:53,078 WARNING 93696 csrf.py 160] - Forbidden (CSRF token missing or incorrect.): /godzilla/login
+[2019-01-04 10:53:55,032 WARNING 93696 base.py 152] - Not Found: /favicon.ico
+[2019-01-04 10:55:48,022 INFO 72208 login.py 17] - admin
+[2019-01-04 10:57:32,451 INFO 72208 login.py 17] - admin
+[2019-01-04 11:01:53,135 INFO 72208 login.py 17] - admin
+[2019-01-04 11:01:57,798 INFO 72208 login.py 17] - admin
+[2019-01-04 11:15:31,273 INFO 72208 login.py 17] - admin
+[2019-01-04 11:15:38,986 INFO 72208 login.py 17] - admin
+[2019-01-04 11:17:10,991 INFO 41340 login.py 17] - admin
+[2019-01-04 11:19:16,415 INFO 41340 login.py 17] - admin
+[2019-01-04 11:28:09,210 INFO 41340 login.py 17] - admin
+[2019-01-04 12:02:17,286 INFO 41340 login.py 17] - admin
+[2019-01-04 12:03:10,703 INFO 41340 login.py 17] - admin
+[2019-01-04 12:03:46,628 INFO 41340 login.py 17] - admin
+[2019-01-04 12:05:45,267 INFO 41340 login.py 17] - admin
+[2019-01-04 12:06:01,206 INFO 41340 login.py 17] - admin
+[2019-01-04 12:08:22,440 INFO 41340 login.py 17] - admin
+[2019-01-04 12:08:30,827 INFO 41340 login.py 17] - admin
+[2019-01-04 12:08:49,958 INFO 41340 login.py 17] - admin
+[2019-01-04 12:09:32,677 INFO 94248 login.py 17] - admin
+[2019-01-04 12:12:15,624 INFO 94248 login.py 17] - admin
+[2019-01-04 12:12:57,260 INFO 94248 login.py 17] - admin
+[2019-01-04 12:13:00,598 INFO 94248 login.py 17] - admin
+[2019-01-04 12:13:57,238 INFO 94248 login.py 17] - admin
+[2019-01-04 12:14:13,496 INFO 94248 login.py 17] - admin
+[2019-01-04 13:36:35,409 WARNING 92436 base.py 152] - Not Found: /godzilla/godzilla/login
+[2019-01-04 13:36:36,249 WARNING 92436 base.py 152] - Not Found: /favicon.ico
+[2019-01-04 13:37:10,506 ERROR 95980 exception.py 135] - Internal Server Error: /godzilla/index
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\contrib\auth\decorators.py", line 25, in _wrapped_view
+    resolved_login_url = resolve_url(login_url or settings.LOGIN_URL)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\shortcuts.py", line 147, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\django\urls\resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+[2019-01-04 13:37:11,790 WARNING 95980 base.py 152] - Not Found: /favicon.ico
+[2019-01-04 13:37:25,664 WARNING 94248 base.py 152] - Not Found: /login
+[2019-01-04 13:37:44,030 WARNING 40556 base.py 152] - Not Found: /index/
+[2019-01-04 13:37:50,680 WARNING 40556 base.py 152] - Not Found: /godzilla/index/
+[2019-01-04 13:37:55,606 WARNING 40556 base.py 152] - Not Found: /godzilla/godzilla/login
+[2019-01-04 13:39:19,328 WARNING 96404 base.py 152] - Not Found: /godzilla
+[2019-01-04 13:39:26,678 INFO 96404 login.py 17] - admin
+[2019-01-04 13:39:31,332 INFO 96404 login.py 17] - admin
+[2019-01-04 13:39:38,815 INFO 96404 login.py 17] - admin
+[2019-01-04 13:39:57,903 INFO 96140 login.py 17] - admin
+[2019-01-04 13:40:48,198 INFO 94232 login.py 17] - admin
+[2019-01-04 13:44:07,383 INFO 92988 login.py 17] - admin
+[2019-01-04 13:48:50,766 INFO 96212 login.py 17] - admin
+[2019-01-04 13:50:55,223 WARNING 95888 base.py 152] - Not Found: /
+[2019-01-04 13:52:16,835 WARNING 95888 base.py 152] - Not Found: /
+[2019-01-04 13:52:21,263 WARNING 95888 base.py 152] - Not Found: /login/
+[2019-01-04 13:53:34,260 INFO 92820 login.py 17] - admin
+[2019-01-04 13:53:45,766 INFO 92820 login.py 17] - admin
+[2019-01-04 13:54:59,779 WARNING 92820 base.py 152] - Not Found: /godzilla/admin-list.html
+[2019-01-05 11:33:00,547 INFO 118448 login.py 17] - admin
+[2019-01-05 11:36:54,031 WARNING 118448 base.py 152] - Not Found: /godzilla/xxx.html
+[2019-01-05 11:36:55,835 WARNING 118448 base.py 152] - Not Found: /godzilla/member-del.html
+[2019-01-05 11:43:27,047 WARNING 118448 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 11:43:29,248 WARNING 118448 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 11:43:33,912 WARNING 118448 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 11:44:48,036 WARNING 118448 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 11:44:50,016 WARNING 118448 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 11:44:51,487 WARNING 118448 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 13:23:46,598 ERROR 118448 exception.py 124] - Internal Server Error: /godzilla/login
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 202, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 916, in connect
+    **kwargs)
+  File "D:\Python\Python36\lib\socket.py", line 722, in create_connection
+    raise err
+  File "D:\Python\Python36\lib\socket.py", line 713, in create_connection
+    sock.connect(sa)
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' ([WinError 10065] 套接字操作尝试一个无法连接的主机。)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\deprecation.py", line 126, in __call__
+    response = self.process_response(request, response)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\middleware.py", line 47, in process_response
+    if request.session.get_expire_at_browser_close():
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 292, in get_expire_at_browser_close
+    if self.get('_session_expiry') is None:
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 68, in get
+    return self._session.get(key, default)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 207, in _get_session
+    self._session_cache = self.load()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 35, in load
+    expire_date__gt=timezone.now()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 379, in get
+    num = len(clone)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 238, in __len__
+    self._fetch_all()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 1085, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 824, in execute_sql
+    sql, params = self.as_sql()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\lookups.py", line 155, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\lookups.py", line 148, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\fields\__init__.py", line 629, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 185, in data_types
+    if self.features.supports_microsecond_precision:
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\features.py", line 54, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 369, in mysql_version
+    with self.temporary_connection() as cursor:
+  File "D:\Python\Python36\lib\contextlib.py", line 82, in __enter__
+    return next(self.gen)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' ([WinError 10065] 套接字操作尝试一个无法连接的主机。)")
+[2019-01-05 13:25:30,912 INFO 118448 login.py 17] - admin
+[2019-01-05 13:25:37,174 WARNING 118448 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 13:29:51,204 WARNING 118448 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 13:32:12,276 WARNING 122744 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 13:32:31,288 WARNING 122744 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 13:32:46,758 WARNING 122744 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 13:32:49,695 WARNING 122744 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 13:33:25,200 WARNING 122744 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 13:33:27,736 WARNING 122744 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 13:33:42,167 WARNING 122744 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 13:38:26,145 WARNING 122744 base.py 152] - Not Found: /godzilla/undefined
+[2019-01-05 13:39:29,746 WARNING 122744 base.py 152] - Not Found: /godzilla/order-list.html
+[2019-01-05 13:40:39,555 ERROR 122744 exception.py 124] - Internal Server Error: /godzilla/index
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\views.py", line 19, in index
+    return render_to_response('index.html', {'username': username,"permission":permission})
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 73: 'endif', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+[2019-01-05 13:40:41,432 WARNING 122744 base.py 152] - Not Found: /favicon.ico
+[2019-01-05 13:43:27,947 WARNING 122744 base.py 152] - Not Found: /godzilla/order-list.html
+[2019-01-05 13:43:30,888 WARNING 122744 base.py 152] - Not Found: /godzilla/order-list.html
+[2019-01-05 13:43:39,108 WARNING 122744 base.py 152] - Not Found: /godzilla/order-list.html
+[2019-01-05 13:44:51,980 WARNING 122744 base.py 152] - Not Found: /godzilla/order-list.html
+[2019-01-05 13:44:57,651 WARNING 122744 base.py 152] - Not Found: /godzilla/order-list.html
+[2019-01-05 13:48:18,262 WARNING 122744 base.py 152] - Not Found: /godzilla/order-list.html
+[2019-01-05 14:06:59,668 INFO 122112 login.py 17] - admin
+[2019-01-05 14:08:31,160 WARNING 122112 base.py 152] - Not Found: /godzilla/order-list.html
+[2019-01-05 14:44:07,746 ERROR 120528 exception.py 124] - Internal Server Error: /godzilla/index
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 202, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 916, in connect
+    **kwargs)
+  File "D:\Python\Python36\lib\socket.py", line 722, in create_connection
+    raise err
+  File "D:\Python\Python36\lib\socket.py", line 713, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\views.py", line 14, in index
+    username = request.session.get('username')
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 68, in get
+    return self._session.get(key, default)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 207, in _get_session
+    self._session_cache = self.load()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 35, in load
+    expire_date__gt=timezone.now()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 379, in get
+    num = len(clone)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 238, in __len__
+    self._fetch_all()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 1085, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 824, in execute_sql
+    sql, params = self.as_sql()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\lookups.py", line 155, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\lookups.py", line 148, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\fields\__init__.py", line 629, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 185, in data_types
+    if self.features.supports_microsecond_precision:
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\features.py", line 54, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 369, in mysql_version
+    with self.temporary_connection() as cursor:
+  File "D:\Python\Python36\lib\contextlib.py", line 82, in __enter__
+    return next(self.gen)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+[2019-01-05 14:44:10,179 WARNING 120528 base.py 152] - Not Found: /favicon.ico
+[2019-01-05 14:45:16,590 ERROR 119448 exception.py 124] - Internal Server Error: /godzilla/index
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\views.py", line 19, in index
+    return render_to_response('index.html', {'username': username,"permission":permission})
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 603, in compile_filter
+    return FilterExpression(token, self)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 703, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' submemu.submemuurl' from 'memu.permission_url submemu.submemuurl'
+[2019-01-05 14:45:17,840 WARNING 119448 base.py 152] - Not Found: /favicon.ico
+[2019-01-05 14:47:03,163 WARNING 120636 base.py 152] - Not Found: /godzilla/permanager/userlist
+[2019-01-05 14:48:29,977 WARNING 114912 base.py 152] - Not Found: /godzilla/permanager/role-add.html
+[2019-01-05 14:50:11,055 WARNING 114912 base.py 152] - Not Found: /godzilla/permanager/role-add.html
+[2019-01-05 14:52:51,832 WARNING 121840 base.py 152] - Not Found: /godzilla/permanager/role-add.html
+[2019-01-05 15:01:20,744 WARNING 114912 base.py 152] - Not Found: /godzilla/inde
+[2019-01-05 15:01:55,664 WARNING 114912 base.py 152] - Not Found: /godzilla/permanager/roleadd
+[2019-01-05 15:02:45,403 ERROR 121848 exception.py 124] - Internal Server Error: /godzilla/permanager/roleadd
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\role.py", line 19, in roleadd
+    return render(request, 'role-add.html')
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 574, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 10: 'static'. Did you forget to register or load this tag?
+[2019-01-05 15:19:27,000 WARNING 118180 base.py 152] - Not Found: /godzilla/permanager/role
+[2019-01-05 15:19:36,771 WARNING 118180 base.py 152] - Not Found: /godzilla/permanager/role
+[2019-01-05 15:20:06,699 WARNING 118180 base.py 152] - Not Found: /godzilla/permanager/role
