@@ -17,6 +17,8 @@ urlpatterns = [
     url(r'^welcome',views.welcome,name="welcome"),
     url(r'^permanager/rolemanager',views.rolemanager,name="rolemanager"),
     url(r'^permanager/roleadd',views.roleadd,name="roleadd"),
+    url(r'^permanager/userlist',views.userlist,name="userlist"),
+    url(r'^permanager/useradd',views.useradd,name="useradd"),
 
 
     url(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATIC_ROOT }),

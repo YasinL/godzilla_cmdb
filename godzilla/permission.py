@@ -40,3 +40,4 @@ def check_permission(fun):    #定义一个装饰器，在views中应用
             return fun(request, *args, **kwargs)
         return render(request, '403.html', locals())
     return wapper
+

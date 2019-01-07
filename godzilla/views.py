@@ -6,7 +6,9 @@ from godzilla.handle.login import login
 from  godzilla.handle.permission import check_permiss
 from  godzilla.handle.role import rolemanager
 from  godzilla.handle.role import roleadd
-
+from  godzilla.handle.usermanager import userlist
+from  godzilla.handle.usermanager import useradd
+from godzilla.handle.decorator_login import login_decorator
 
 
 
@@ -15,15 +17,15 @@ from  godzilla.handle.role import roleadd
 def index(request):
     username = request.session.get('username')
     permission = check_permiss(username)
-    print(permission)
+    # print(permission)
 
     if username is not None:
         return render_to_response('index.html', {'username': username,"permission":permission})
     else:
         return render(request,'login.html')
 
-
-
+'''登录验证'''
+@login_decorator
 def welcome(requests):
     if requests.method == "GET":
         return render(requests,"welcome.html")
