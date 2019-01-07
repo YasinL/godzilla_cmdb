@@ -74,6 +74,7 @@ class grayphone(models.Model):
 
 
 
+
 class RecordLogTable(models.Model):
     username = models.CharField(max_length=100)
     recordclass = models.CharField(max_length=150)
