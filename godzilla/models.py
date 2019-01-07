@@ -54,6 +54,25 @@ class permission(models.Model):
     roleid = models.CharField(max_length=10,null=True)
 
 
+class RedisHost(models.Model):
+    redis_ip = models.GenericIPAddressField()
+    redis_port = models.CharField(max_length=20,null=False)
+    redis_pass = models.CharField(max_length=50,null=True)
+    project_owner =  models.CharField(max_length=50,null=True)
+    project_principal = models.CharField(max_length=20,null=True)
+    typename = models.CharField(max_length=20,null=True)
+    typeid = models.CharField(max_length=1,null=True)
+
+
+class grayphone(models.Model):
+    phone = models.CharField(max_length=11)
+    expirytime  = models.CharField(max_length=30,null=True)
+    phoneencrypt = models.CharField(max_length=150,null=True)
+    online = models.CharField(max_length=10)
+    createuser = models.CharField(max_length=30)
+    createtime = models.CharField(max_length=30,null=True)
+
+
 
 class RecordLogTable(models.Model):
     username = models.CharField(max_length=100)
