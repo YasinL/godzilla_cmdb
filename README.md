@@ -4,6 +4,10 @@
 ### 项目前端来自 X-admin
    链接 http://x.xuebingsi.com/x-admin/v2.0/
 
+QQ ：：
+      332841772
+   
+
 
 ## 项目展示
 ![godzilla_cmdb](https://raw.githubusercontent.com/YasinL/godzilla_cmdb/master/readme/%E7%99%BB%E5%BD%95.png "godzilla_cmdb")
