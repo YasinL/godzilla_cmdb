@@ -1,7 +1,7 @@
 # godzilla_cmdb
 ## 项目开发中……
 
-### 项目前端来之 X-admin
+### 项目前端来自 X-admin
    链接 http://x.xuebingsi.com/x-admin/v2.0/
 
 
