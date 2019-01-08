@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'css/font.css'%}">
+    <link rel="stylesheet" href="{% static 'css/xadmin.css'%}">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'lib/layui/layui.js'%}" charset="utf-8"></script>
+    <script type="text/javascript" src="{% static 'js/xadmin.js'%}"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <div class="x-body">
+        <div class="layui-form">
+            {% if redisinfo %}
+            {% for redis in redisinfo %}
+
+            <div id="rowid" style="display: none"> {{ redis.id }} </div>
+          <div class="layui-form-item">
+              <label  class="layui-form-label">
+                  <span class="x-red">*</span>proxy_name
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="proxy_name" name="proxy_name" required=""
+                  autocomplete="off" class="layui-input" value="{{ redis.proxy_name }}">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">
+                  <span class="x-red">*</span>IP
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="ip" name="ip" required=""
+                  autocomplete="off" class="layui-input" value="{{ redis.redis_ip }}">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">
+                  <span class="x-red">*</span>端口
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="port" name="port" required=""
+                  autocomplete="off" class="layui-input" value="{{ redis.redis_port }}">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label"><span class="x-red">*</span>类型</label>
+              <div class="layui-input-inline">
+                  <select id="type" name="type" class="valid">
+                    <option value="0">Codis</option>
+                    <option value="1">Redis</option>
+                  </select>
+              </div>
+
+
+
+          </div>
+          <div class="layui-form-item">
+              <label  class="layui-form-label">
+                  <span class="x-red">*</span>项目所属
+              </label>
+              <div class="layui-input-inline">
+                  <input  id="owner" name="owner" required="" lay-verify="pass"
+                  autocomplete="off" class="layui-input" value="project_owner">
+              </div>
+              <div class="layui-form-mid layui-word-aux">
+                  6到16个字符
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label  class="layui-form-label">
+                  <span class="x-red">*</span>负责人
+              </label>
+              <div class="layui-input-inline">
+                  <input id="principal" name="principal" required="" lay-verify="repass"
+                  autocomplete="off" class="layui-input" value="{{ redis.project_principal }}">
+              </div>
+          </div>
+
+            {% endfor%}
+            {% endif %}
+          <div class="layui-form-item">
+              <label  class="layui-form-label">
+              </label>
+              <button  class="layui-btn" lay-filter="add" lay-submit="" onclick="cache()">
+                  更新
+              </button>
+          </div>
+        </div>
+    </div>
+    <script>
+
+
+        function cache() {
+            var params = [];
+            var rowid = document.getElementById("rowid").innerText;
+            alert(rowid);
+            var proxy_name = document.getElementById("proxy_name").value;
+            var ip = document.getElementById("ip").value;
+            var port = document.getElementById("port").value;
+            var typeid = $('#type option:selected').val();
+            var typename = $('#type option:selected').text();
+            var owner = document.getElementById("owner").value;
+            var principal = document.getElementById("principal").value;
+
+            var redis = {"rowid":rowid,"proxy_name":proxy_name,"ip":ip,"port":port,"typeid":typeid,"typename":typename,"owner":owner,"principal":principal};
+            params.push(redis);
+            var redisinfo = JSON.stringify(params);
+            var host = window.location.host;
+            var urltest = 'http://' + host + '/godzilla/platformconf/redisupdate';
+
+           $.ajax({
+               type:"POST",
+               url:urltest,
+               datatype:"json",
+               data:redisinfo,
+               success: function (data) {
+                     layer.alert(data, {icon: 6},function () {
+                         // 获得frame索引
+                         var index = parent.layer.getFrameIndex(window.name);
+                         //关闭当前frame
+                         parent.layer.close(index);
+                     });
+               },
+                error: function (data) {
+                    layer.alert(data, {icon: 6}, function () {
+                        // 获得frame索引
+                        var index = parent.layer.getFrameIndex(window.name);
+                        //关闭当前frame
+                        parent.layer.close(index);
+                    });
+                }
+
+           });
+        }
+
+
+    </script>
+
+  </body>
+
+</html>

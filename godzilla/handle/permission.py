@@ -19,8 +19,8 @@ import string
 
 def check_permiss(username):
     memuidlist = []
-    roleid = users.objects.filter(username=username).values('roleid')
-    permissiontable = permission.objects.filter(roleid=(roleid)).values('permission_id')
+    roleid = users.objects.filter(username__exact=username).values('roleid')
+    permissiontable = permission.objects.filter(roleid__exact=roleid).values('permission_id')
 
     for permissionid  in permissiontable:
         fatmemu = memulist.objects.filter(permission_id=permissionid["permission_id"]).values()

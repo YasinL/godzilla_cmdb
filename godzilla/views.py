@@ -8,6 +8,11 @@ from  godzilla.handle.role import rolemanager
 from  godzilla.handle.role import roleadd
 from  godzilla.handle.usermanager import userlist
 from  godzilla.handle.usermanager import useradd
+from godzilla.core.codiscache.codislist import redislist
+from godzilla.core.codiscache.codislist import redisadd
+from godzilla.core.codiscache.codislist import redisedit
+from godzilla.core.codiscache.codislist import redisupdate
+from godzilla.core.codiscache.codislist import redishostdel
 from godzilla.handle.decorator_login import login_decorator
 
 

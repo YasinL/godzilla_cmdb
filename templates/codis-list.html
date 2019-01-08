@@ -30,7 +30,7 @@
 
       <xblock>
         <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
-        <button class="layui-btn" onclick="x_admin_show('添加用户','./useradd')"><i class="layui-icon"></i>添加</button>
+        <button class="layui-btn" onclick="x_admin_show('添加缓存','./redisadd')"><i class="layui-icon"></i>添加</button>
         <span class="x-right" style="line-height:40px">共有数据：88 条</span>
       </xblock>
       <table class="layui-table">
@@ -45,26 +45,32 @@
             <th>端口</th>
             <th>项目所属</th>
             <th>负责人</th>
+            <th>类型</th>
             <th>操作</th>
         </thead>
         <tbody>
-        {% if userlist %}
-        {% for user in userlist %}
+        {% if redisip %}
+        {% for redis in redisip %}
 
           <tr>
             <td>
               <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
             </td>
-
-
-            <td>{{ user.id }}</td>
-            <td>{{ user.username }}</td>
-            <td>{{ user.mobile }}</td>
-            <td>{{ user.email }}</td>
-            <td>{{ user.roleid }}</td>
-            <td>{{ user.date_joined }}</td>
-            <td class="td-status">
-              <span class="layui-btn layui-btn-normal layui-btn-mini">操作</span></td>
+            <td>{{ redis.id }}</td>
+            <td>{{ redis.proxy_name }}</td>
+            <td>{{ redis.redis_ip }}</td>
+            <td>{{ redis.redis_port }}</td>
+            <td>{{ redis.project_owner }}</td>
+            <td>{{ redis.project_principal }}</td>
+            <td>{{ redis.typename }}</td>
+           <td class="td-manage">
+              <a title="编辑"  onclick="x_admin_show('编辑','./redisedit?redisip={{ redis.redis_ip }}')" href="javascript:;">
+                <i class="layui-icon">&#xe642;</i>
+              </a>
+              <a title="删除" onclick="member_del(this,'要删除的id')" href="./redishostdel?rowid={{ redis.id }}">
+                <i class="layui-icon">&#xe640;</i>
+              </a>
+            </td>
           </tr>
         {% endfor%}
         {% endif %}
@@ -122,7 +128,34 @@
       /*用户-删除*/
       function member_del(obj,id){
           layer.confirm('确认要删除吗？',function(index){
-              //发异步删除数据
+              //
+              // var rowid = document.getElementById(rowid).textContent;
+              // var host = window.location.host;
+              // var urltest = 'http://' + host + '/godzilla/platformconf/redishostdel';
+              //
+              // $.ajax({
+              //     type: "GET",
+              //     url: urltest,
+              //     datatype: "json",
+              //     data: rowid,
+              //     success: function (data) {
+              //         layer.alert(data, {icon: 6}, function () {
+              //             // 获得frame索引
+              //             var index = parent.layer.getFrameIndex(window.name);
+              //             //关闭当前frame
+              //             parent.layer.close(index);
+              //         });
+              //     },
+              //     error: function (data) {
+              //         layer.alert(data, {icon: 6}, function () {
+              //             // 获得frame索引
+              //             var index = parent.layer.getFrameIndex(window.name);
+              //             //关闭当前frame
+              //             parent.layer.close(index);
+              //         });
+              //     }
+              // });
+
               $(obj).parents("tr").remove();
               layer.msg('已删除!',{icon:1,time:1000});
           });

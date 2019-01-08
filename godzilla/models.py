@@ -55,8 +55,11 @@ class permission(models.Model):
 
 
 class RedisHost(models.Model):
+    proxy_name = models.CharField(max_length=50,null=True)
     redis_ip = models.GenericIPAddressField()
     redis_port = models.CharField(max_length=20,null=False)
+    admin_addr = models.GenericIPAddressField(null=True)
+    admin_port = models.CharField(max_length=20,null=True)
     redis_pass = models.CharField(max_length=50,null=True)
     project_owner =  models.CharField(max_length=50,null=True)
     project_principal = models.CharField(max_length=20,null=True)

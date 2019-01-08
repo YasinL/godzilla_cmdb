@@ -18,6 +18,12 @@ urlpatterns = [
     url(r'^permanager/rolemanager',views.rolemanager,name="rolemanager"),
     url(r'^permanager/roleadd',views.roleadd,name="roleadd"),
     url(r'^permanager/userlist',views.userlist,name="userlist"),
+    url(r'^platformconf/redislist',views.redislist,name="redislist"),
+    url(r'^platformconf/cacheconfig',views.redislist,name="redislist"),
+    url(r'^platformconf/redisadd',views.redisadd,name="redisadd"),
+    url(r'^platformconf/redisedit',views.redisedit,name="redisedit"),
+    url(r'^platformconf/redisupdate',views.redisupdate,name="redisupdate"),
+    url(r'^platformconf/redishostdel',views.redishostdel,name="redishostdel"),
     url(r'^permanager/useradd',views.useradd,name="useradd"),
 
 

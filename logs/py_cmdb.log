@@ -1,4 +1,227 @@
-[2019-01-07 16:34:30,055 ERROR 186716 exception.py 124] - Internal Server Error: /godzilla/permanager/useradd
+[2019-01-08 14:10:30,289 WARNING 212644 base.py 152] - Not Found: /godzilla/platformconf/redishostdel
+[2019-01-08 14:10:58,632 ERROR 209892 exception.py 124] - Internal Server Error: /godzilla/platformconf/redishostdel
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view godzilla.core.codiscache.codislist.redishostdel didn't return an HttpResponse object. It returned None instead.
+[2019-01-08 14:14:56,843 ERROR 180812 exception.py 124] - Internal Server Error: /godzilla/platformconf/redishostdel
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\core\codiscache\codislist.py", line 73, in redishostdel
+    return   HttpResponse.status_code(200)
+TypeError: 'int' object is not callable
+[2019-01-08 14:25:00,236 ERROR 212176 exception.py 124] - Internal Server Error: /godzilla/platformconf/redishostdel
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\core\codiscache\codislist.py", line 73, in redishostdel
+    return HttpResponse.status_code("200")
+TypeError: 'int' object is not callable
+[2019-01-08 14:28:56,903 WARNING 211276 base.py 152] - Not Found: /godzilla/platformconf/hostconfig
+[2019-01-08 14:42:52,622 ERROR 211276 exception.py 124] - Internal Server Error: /godzilla/
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\views.py", line 24, in index
+    permission = check_permiss(username)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\permission.py", line 23, in check_permiss
+    permissiontable = permission.objects.filter(roleid__ex=roleid).values('permission_id')
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 794, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 812, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1227, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1187, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1081, in build_lookup
+    lhs = self.try_transform(lhs, name, lookups)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in try_transform
+    (name, lhs.output_field.__class__.__name__))
+django.core.exceptions.FieldError: Unsupported lookup 'ex' for CharField or join on the field not permitted.
+[2019-01-08 14:42:54,887 WARNING 211276 base.py 152] - Not Found: /favicon.ico
+[2019-01-08 14:43:12,992 ERROR 211276 exception.py 124] - Internal Server Error: /godzilla/
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\views.py", line 24, in index
+    permission = check_permiss(username)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\permission.py", line 23, in check_permiss
+    permissiontable = permission.objects.filter(roleid__ex=roleid).values('permission_id')
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 794, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 812, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1227, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1187, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1081, in build_lookup
+    lhs = self.try_transform(lhs, name, lookups)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in try_transform
+    (name, lhs.output_field.__class__.__name__))
+django.core.exceptions.FieldError: Unsupported lookup 'ex' for CharField or join on the field not permitted.
+[2019-01-08 14:43:16,848 ERROR 211276 exception.py 124] - Internal Server Error: /godzilla/
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\views.py", line 24, in index
+    permission = check_permiss(username)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\permission.py", line 23, in check_permiss
+    permissiontable = permission.objects.filter(roleid__ex=roleid).values('permission_id')
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 794, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 812, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1227, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1187, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1081, in build_lookup
+    lhs = self.try_transform(lhs, name, lookups)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in try_transform
+    (name, lhs.output_field.__class__.__name__))
+django.core.exceptions.FieldError: Unsupported lookup 'ex' for CharField or join on the field not permitted.
+[2019-01-08 14:43:18,390 WARNING 211276 base.py 152] - Not Found: /favicon.ico
+[2019-01-08 14:43:29,555 WARNING 211276 base.py 152] - Not Found: /godzilla
+[2019-01-08 14:43:33,177 ERROR 211276 exception.py 124] - Internal Server Error: /godzilla/
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\views.py", line 24, in index
+    permission = check_permiss(username)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\permission.py", line 23, in check_permiss
+    permissiontable = permission.objects.filter(roleid__ex=roleid).values('permission_id')
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 794, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 812, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1227, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1187, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1081, in build_lookup
+    lhs = self.try_transform(lhs, name, lookups)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in try_transform
+    (name, lhs.output_field.__class__.__name__))
+django.core.exceptions.FieldError: Unsupported lookup 'ex' for CharField or join on the field not permitted.
+[2019-01-08 14:43:34,920 WARNING 211276 base.py 152] - Not Found: /favicon.ico
+[2019-01-08 14:43:48,150 ERROR 211276 exception.py 124] - Internal Server Error: /godzilla/
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\views.py", line 24, in index
+    permission = check_permiss(username)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\permission.py", line 23, in check_permiss
+    permissiontable = permission.objects.filter(roleid__ex=roleid).values('permission_id')
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 794, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 812, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1227, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1187, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1081, in build_lookup
+    lhs = self.try_transform(lhs, name, lookups)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in try_transform
+    (name, lhs.output_field.__class__.__name__))
+django.core.exceptions.FieldError: Unsupported lookup 'ex' for CharField or join on the field not permitted.
+[2019-01-08 14:43:49,910 WARNING 211276 base.py 152] - Not Found: /favicon.ico
+[2019-01-08 14:45:25,562 ERROR 211216 exception.py 124] - Internal Server Error: /godzilla/
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\views.py", line 24, in index
+    permission = check_permiss(username)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\permission.py", line 23, in check_permiss
+    permissiontable = permission.objects.filter(roleid__ex=roleid).values('permission_id')
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 794, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 812, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1227, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1253, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1187, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1081, in build_lookup
+    lhs = self.try_transform(lhs, name, lookups)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in try_transform
+    (name, lhs.output_field.__class__.__name__))
+django.core.exceptions.FieldError: Unsupported lookup 'ex' for CharField or join on the field not permitted.
+[2019-01-08 14:45:28,239 WARNING 211216 base.py 152] - Not Found: /favicon.ico
+[2019-01-08 14:46:05,558 WARNING 181148 base.py 152] - Not Found: /godzilla/platformconf/None
+[2019-01-08 14:48:05,375 WARNING 181148 base.py 152] - Not Found: /godzilla
+[2019-01-08 14:48:59,331 WARNING 212584 base.py 152] - Not Found: /godzilla/cachemanager/accuratedel
+[2019-01-08 16:28:51,243 WARNING 212584 base.py 152] - Not Found: /godzilla
+[2019-01-08 16:28:51,292 WARNING 212584 base.py 152] - Not Found: /favicon.ico
+[2019-01-08 16:34:49,057 ERROR 212584 exception.py 124] - Internal Server Error: /godzilla/
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 202, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 916, in connect
     **kwargs)
@@ -34,18 +257,56 @@ Traceback (most recent call last):
     response = self.process_exception_by_middleware(e, request)
   File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\usermanager.py", line 55, in useradd
-    for roles in roletable:
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 256, in __iter__
+  File "D:\pythoncode\godzilla_cmdb\godzilla\views.py", line 23, in index
+    username = request.session.get('username')
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 68, in get
+    return self._session.get(key, default)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 207, in _get_session
+    self._session_cache = self.load()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 35, in load
+    expire_date__gt=timezone.now()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 379, in get
+    num = len(clone)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 238, in __len__
     self._fetch_all()
   File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 1085, in _fetch_all
     self._result_cache = list(self.iterator())
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 109, in __iter__
-    for row in compiler.results_iter():
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 789, in results_iter
-    results = self.execute_sql(MULTI)
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 833, in execute_sql
-    cursor = self.connection.cursor()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 824, in execute_sql
+    sql, params = self.as_sql()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\lookups.py", line 155, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\lookups.py", line 148, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\fields\__init__.py", line 629, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 185, in data_types
+    if self.features.supports_microsecond_precision:
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\features.py", line 54, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 369, in mysql_version
+    with self.temporary_connection() as cursor:
+  File "D:\Python\Python36\lib\contextlib.py", line 82, in __enter__
+    return next(self.gen)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 564, in temporary_connection
+    cursor = self.cursor()
   File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 231, in cursor
     cursor = self.make_debug_cursor(self._cursor())
   File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 204, in _cursor
@@ -69,57 +330,45 @@ Traceback (most recent call last):
   File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
     raise exc
 django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
-[2019-01-07 16:34:58,219 ERROR 186716 exception.py 124] - Internal Server Error: /godzilla/permanager/useradd
-Traceback (most recent call last):
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
-    response = get_response(request)
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\usermanager.py", line 39, in useradd
-    roleid  = userinfo[0]["roleid"]
-KeyError: 'roleid'
-[2019-01-07 16:35:41,299 ERROR 186716 exception.py 124] - Internal Server Error: /godzilla/permanager/useradd
-Traceback (most recent call last):
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
-    response = get_response(request)
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\usermanager.py", line 39, in useradd
-    roleid  = userinfo[0]["roleid"]
-KeyError: 'roleid'
-[2019-01-07 16:40:47,616 ERROR 186716 exception.py 124] - Internal Server Error: /godzilla/permanager/useradd
-Traceback (most recent call last):
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
-    response = get_response(request)
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\usermanager.py", line 39, in useradd
-    roleid  = userinfo[0]["roleid"]
-KeyError: 'roleid'
-[2019-01-07 16:42:31,455 ERROR 186716 usermanager.py 46] - (1062, "Duplicate entry 'wangxun' for key 'username'")
-[2019-01-07 16:43:32,916 INFO 186716 login.py 17] - wangxun
-[2019-01-07 16:45:47,988 INFO 186716 login.py 17] - admin
-[2019-01-07 16:47:00,644 INFO 186716 login.py 17] - wangxun
-[2019-01-07 16:47:22,732 INFO 186716 login.py 17] - admin
-[2019-01-07 17:01:02,811 ERROR 181804 exception.py 124] - Internal Server Error: /godzilla/permanager/useradd
-Traceback (most recent call last):
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
-    response = get_response(request)
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\decorator_login.py", line 17, in inner
-    ret = func(*args,**kwargs)
-TypeError: useradd() missing 1 required positional argument: 'request'
-[2019-01-07 17:01:03,886 WARNING 181804 base.py 152] - Not Found: /favicon.ico
-[2019-01-07 17:05:43,592 WARNING 176596 base.py 152] - Not Found: /godzilla
-[2019-01-07 17:05:44,515 WARNING 176596 base.py 152] - Not Found: /favicon.ico
-[2019-01-07 17:06:59,407 INFO 165736 login.py 17] - admin
-[2019-01-07 17:07:23,838 INFO 165736 login.py 17] - admin
+[2019-01-08 16:53:57,859 DEBUG 211508 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 16:53:57,955 DEBUG 211508 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 16:54:08,455 DEBUG 212836 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 16:54:08,559 DEBUG 212836 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 16:56:46,113 DEBUG 180648 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 16:56:46,227 DEBUG 180648 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 16:57:05,823 DEBUG 208076 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 16:57:05,921 DEBUG 208076 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 16:57:13,947 DEBUG 212576 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 16:57:14,071 DEBUG 212576 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 16:57:33,095 DEBUG 187756 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 16:57:33,185 DEBUG 187756 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 16:57:45,108 DEBUG 208084 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 16:57:45,197 DEBUG 208084 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 16:57:50,534 DEBUG 211492 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 16:57:50,639 DEBUG 211492 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:01:43,017 DEBUG 212172 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:01:43,115 DEBUG 212172 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:04:57,089 DEBUG 212808 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:04:57,176 DEBUG 212808 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:05:25,103 DEBUG 183652 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:05:25,217 DEBUG 183652 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:05:35,123 DEBUG 209948 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:05:35,238 DEBUG 209948 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:06:06,875 DEBUG 212880 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:06:06,959 DEBUG 212880 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:06:49,793 DEBUG 211736 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:06:49,884 DEBUG 211736 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:06:58,624 DEBUG 186724 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:06:58,718 DEBUG 186724 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:08:35,334 DEBUG 209228 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:08:35,438 DEBUG 209228 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:08:54,483 DEBUG 212928 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:08:54,587 DEBUG 212928 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:09:08,456 DEBUG 212660 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:09:08,544 DEBUG 212660 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:09:19,484 DEBUG 209932 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:09:19,595 DEBUG 209932 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:09:51,851 DEBUG 206516 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:09:51,953 DEBUG 206516 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-08 17:11:06,371 DEBUG 208172 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-08 17:11:06,462 DEBUG 208172 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
