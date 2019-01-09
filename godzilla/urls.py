@@ -24,6 +24,11 @@ urlpatterns = [
     url(r'^platformconf/redisedit',views.redisedit,name="redisedit"),
     url(r'^platformconf/redisupdate',views.redisupdate,name="redisupdate"),
     url(r'^platformconf/redishostdel',views.redishostdel,name="redishostdel"),
+    url(r'^cachemanager/cache', views.cachelist, name="cachelist"),
+    url(r'^cachemanager/redis_get', views.redis_get, name="redis_get"),
+    url(r'^cachemanager/redis_del', views.redis_del, name="redis_del"),
+    url(r'^cachemanager/matchingdel', views.matchingdel, name="matchingdel"),
+
     url(r'^permanager/useradd',views.useradd,name="useradd"),
 
 

@@ -76,6 +76,12 @@ class grayphone(models.Model):
     createtime = models.CharField(max_length=30,null=True)
 
 
+class tenginehost(models.Model):
+    host = models.GenericIPAddressField()
+    hostredisport =  models.CharField(max_length=10,null=True)
+
+
+
 
 
 class RecordLogTable(models.Model):

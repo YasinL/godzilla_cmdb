@@ -12,6 +12,20 @@ from godzilla.core.Log import logger
 from godzilla.handle.decorator_login import login_decorator
 
 
+
+def cachelist(request):
+    redisip = []
+    if request.method == "POST":
+        pass
+    else:
+        redistable = RedisHost.objects.all().values()
+        for redis in redistable:
+            redisip.append(redis)
+
+        return  render_to_response('cache-list.html',{"redisip":redisip})
+
+
+
 def redislist(request):
     redisip = []
     if request.method == "POST":

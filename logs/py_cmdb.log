@@ -372,3 +372,674 @@ django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '118.
 [2019-01-08 17:09:51,953 DEBUG 206516 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
 [2019-01-08 17:11:06,371 DEBUG 208172 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
 [2019-01-08 17:11:06,462 DEBUG 208172 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:54:23,510 DEBUG 232032 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:54:23,640 DEBUG 232032 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:54:28,894 DEBUG 235204 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:54:28,971 DEBUG 235204 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:54:33,680 DEBUG 235308 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:54:33,777 DEBUG 235308 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:54:38,144 DEBUG 233404 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:54:38,247 DEBUG 233404 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:54:41,631 DEBUG 234008 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:54:41,737 DEBUG 234008 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:55:12,455 DEBUG 208120 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:55:12,544 DEBUG 208120 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:55:16,247 DEBUG 235040 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:55:16,347 DEBUG 235040 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:55:20,230 DEBUG 234848 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:55:20,323 DEBUG 234848 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:55:23,924 DEBUG 231624 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:55:24,009 DEBUG 231624 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:55:27,913 DEBUG 231736 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:55:28,011 DEBUG 231736 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:55:34,713 DEBUG 72936 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:55:34,798 DEBUG 72936 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:55:40,396 DEBUG 233960 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:55:40,481 DEBUG 233960 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:55:44,704 DEBUG 235056 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:55:44,790 DEBUG 235056 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:56:31,119 DEBUG 232936 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:56:31,209 DEBUG 232936 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:56:35,611 DEBUG 233076 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:56:35,703 DEBUG 233076 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:56:38,993 DEBUG 230396 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:56:39,104 DEBUG 230396 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:56:43,223 DEBUG 235008 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:56:43,315 DEBUG 235008 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 08:56:47,292 DEBUG 211400 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 08:56:47,401 DEBUG 211400 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 10:25:36,457 DEBUG 179204 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 10:25:36,566 DEBUG 179204 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 10:25:36,875 ERROR 186724 cachekeyoperation.py 105] - handle request, command 'KEYS' is not allowed
+[2019-01-09 10:25:36,883 ERROR 233628 cachekeyoperation.py 105] - handle request, command 'KEYS' is not allowed
+[2019-01-09 10:26:13,456 DEBUG 235176 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 10:26:13,539 DEBUG 235176 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 10:26:13,643 ERROR 212544 cachekeyoperation.py 105] - handle request, command 'KEYS' is not allowed
+[2019-01-09 10:26:13,644 ERROR 234548 cachekeyoperation.py 105] - handle request, command 'KEYS' is not allowed
+[2019-01-09 10:28:34,068 DEBUG 186820 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 10:28:34,164 DEBUG 186820 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 10:29:19,553 ERROR 235640 cachekeyoperation.py 105] - handle request, command 'KEYS' is not allowed
+[2019-01-09 10:31:18,963 ERROR 235148 cachekeyoperation.py 105] - handle request, command 'KEYS' is not allowed
+[2019-01-09 10:31:28,970 DEBUG 230572 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 10:31:29,085 DEBUG 230572 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 10:32:08,197 DEBUG 236028 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 10:32:08,312 DEBUG 236028 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 10:33:03,864 DEBUG 231868 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 10:33:03,970 DEBUG 231868 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 10:35:01,059 ERROR 234328 cachekeyoperation.py 30] - (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+[2019-01-09 10:35:45,072 ERROR 235796 cachekeyoperation.py 30] - (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+[2019-01-09 10:36:12,110 DEBUG 236296 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 10:36:12,204 DEBUG 236296 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 10:37:15,583 DEBUG 236992 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 10:37:15,668 DEBUG 236992 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 10:37:20,798 ERROR 185568 cachekeyoperation.py 107] - Error 11004 connecting to 127:0. getaddrinfo failed.
+[2019-01-09 10:37:20,799 ERROR 233852 cachekeyoperation.py 107] - Error 11004 connecting to 127:0. getaddrinfo failed.
+[2019-01-09 10:37:51,020 DEBUG 231776 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 10:37:51,105 DEBUG 231776 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 10:37:56,223 ERROR 234532 cachekeyoperation.py 109] - Error 11004 connecting to 127:0. getaddrinfo failed.
+[2019-01-09 10:37:56,223 ERROR 235104 cachekeyoperation.py 109] - Error 11004 connecting to 127:0. getaddrinfo failed.
+[2019-01-09 10:38:05,351 DEBUG 212256 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 10:38:05,443 DEBUG 212256 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 10:38:07,456 ERROR 179832 cachekeyoperation.py 109] - Error 10061 connecting to 127.0.0.1:16379. 由于目标计算机积极拒绝，无法连接。.
+[2019-01-09 10:38:07,457 ERROR 234808 cachekeyoperation.py 109] - Error 10061 connecting to 127.0.0.1:16380. 由于目标计算机积极拒绝，无法连接。.
+[2019-01-09 10:39:02,078 DEBUG 236952 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 10:39:02,176 DEBUG 236952 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 11:02:31,006 DEBUG 236776 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 11:02:31,087 DEBUG 236776 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 11:03:23,411 DEBUG 237244 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 11:03:23,513 DEBUG 237244 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 11:09:18,235 DEBUG 237280 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 11:09:18,332 DEBUG 237280 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 11:09:54,640 DEBUG 233792 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 11:09:54,718 DEBUG 233792 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 11:10:25,582 DEBUG 237192 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 11:10:25,673 DEBUG 237192 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 11:10:25,845 ERROR 235080 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 11:22:59,091 WARNING 212424 base.py 152] - Not Found: /favicon.ico
+[2019-01-09 11:23:28,523 INFO 212424 login.py 17] - admin
+[2019-01-09 11:26:20,633 WARNING 212424 base.py 152] - Not Found: /godzilla/cachemanager/cache
+[2019-01-09 13:35:53,822 ERROR 208092 exception.py 124] - Internal Server Error: /godzilla/index
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 202, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 916, in connect
+    **kwargs)
+  File "D:\Python\Python36\lib\socket.py", line 722, in create_connection
+    raise err
+  File "D:\Python\Python36\lib\socket.py", line 713, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\views.py", line 24, in index
+    username = request.session.get('username')
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 68, in get
+    return self._session.get(key, default)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 207, in _get_session
+    self._session_cache = self.load()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 35, in load
+    expire_date__gt=timezone.now()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 379, in get
+    num = len(clone)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 238, in __len__
+    self._fetch_all()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 1085, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 824, in execute_sql
+    sql, params = self.as_sql()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\lookups.py", line 155, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\lookups.py", line 148, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\fields\__init__.py", line 629, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 185, in data_types
+    if self.features.supports_microsecond_precision:
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\features.py", line 54, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 369, in mysql_version
+    with self.temporary_connection() as cursor:
+  File "D:\Python\Python36\lib\contextlib.py", line 82, in __enter__
+    return next(self.gen)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+[2019-01-09 13:35:56,807 WARNING 208092 base.py 152] - Not Found: /favicon.ico
+[2019-01-09 13:54:54,017 WARNING 208092 base.py 152] - Not Found: /godzilla/cachemanager/redisadd
+[2019-01-09 13:55:35,940 WARNING 208092 base.py 152] - Not Found: /godzilla/cachemanager/redisadd
+[2019-01-09 14:04:56,092 WARNING 181260 base.py 152] - Not Found: /godzilla/cachemanager/redisadd
+[2019-01-09 14:21:38,720 ERROR 236924 exception.py 124] - Internal Server Error: /godzilla/cachemanager/redis_get
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'redisip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 17, in redis_get
+    redisip = request.GET["redisip"]
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'redisip'"
+[2019-01-09 14:22:14,443 WARNING 236924 base.py 152] - Not Found: /godzilla/cachemanager/graynumber
+[2019-01-09 14:22:16,986 ERROR 236924 exception.py 124] - Internal Server Error: /godzilla/cachemanager/redis_get
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'redisip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 17, in redis_get
+    redisip = request.GET["redisip"]
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'redisip'"
+[2019-01-09 14:23:06,211 ERROR 236924 exception.py 124] - Internal Server Error: /godzilla/cachemanager/redis_get
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'redisip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 17, in redis_get
+    redisip = request.GET["redisip"]
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'redisip'"
+[2019-01-09 14:37:40,468 ERROR 236924 exception.py 124] - Internal Server Error: /godzilla/index
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 202, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 916, in connect
+    **kwargs)
+  File "D:\Python\Python36\lib\socket.py", line 722, in create_connection
+    raise err
+  File "D:\Python\Python36\lib\socket.py", line 713, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\views.py", line 26, in index
+    username = request.session.get('username')
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 68, in get
+    return self._session.get(key, default)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 207, in _get_session
+    self._session_cache = self.load()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 35, in load
+    expire_date__gt=timezone.now()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 379, in get
+    num = len(clone)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 238, in __len__
+    self._fetch_all()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 1085, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 824, in execute_sql
+    sql, params = self.as_sql()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\lookups.py", line 155, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\lookups.py", line 148, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\fields\__init__.py", line 629, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 185, in data_types
+    if self.features.supports_microsecond_precision:
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\features.py", line 54, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 369, in mysql_version
+    with self.temporary_connection() as cursor:
+  File "D:\Python\Python36\lib\contextlib.py", line 82, in __enter__
+    return next(self.gen)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+[2019-01-09 14:38:07,088 WARNING 236924 base.py 152] - Not Found: /godzilla/cachemanager/graynumber
+[2019-01-09 14:38:09,321 ERROR 236924 exception.py 124] - Internal Server Error: /godzilla/cachemanager/redis_get
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 23, in redis_get
+    return render_to_response('redis_get.html',{"redisinfo":redisinfo})
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 208, in render
+    return self._render(context)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\urls\base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\urls\resolvers.py", line 389, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cachemanager/redis_get' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+[2019-01-09 14:38:34,971 ERROR 236924 exception.py 124] - Internal Server Error: /godzilla/cachemanager/redis_get
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\urls\base.py", line 77, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'cachemanager'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 23, in redis_get
+    return render_to_response('redis_get.html',{"redisinfo":redisinfo})
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 208, in render
+    return self._render(context)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\template\defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\urls\base.py", line 84, in reverse
+    (key, ':'.join(resolved_path))
+django.urls.exceptions.NoReverseMatch: 'cachemanager' is not a registered namespace inside 'godzilla'
+[2019-01-09 14:46:38,540 WARNING 231596 base.py 152] - Not Found: /godzilla/cachemanager/redis_ge
+[2019-01-09 14:47:56,726 WARNING 231596 base.py 152] - Not Found: /godzilla/cachemanager/redis_ge
+[2019-01-09 14:48:28,697 WARNING 238416 base.py 152] - Not Found: /godzilla/cachemanager/redis_ge
+[2019-01-09 14:48:46,881 ERROR 238416 exception.py 124] - Internal Server Error: /godzilla/cachemanager/redis_get
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 20, in redis_get
+    key  = redisinfo[0]["key"]
+KeyError: 'key'
+[2019-01-09 14:50:24,560 ERROR 238416 exception.py 124] - Internal Server Error: /godzilla/cachemanager/redis_get
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\connection.py", line 541, in _connect
+    raise err
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\connection.py", line 529, in _connect
+    sock.connect(socket_address)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\client.py", line 667, in execute_command
+    connection.send_command(*args)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 3.3.3.3:8080. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\connection.py", line 484, in connect
+    sock = self._connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\connection.py", line 541, in _connect
+    raise err
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\connection.py", line 529, in _connect
+    sock.connect(socket_address)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 22, in redis_get
+    redisgetvalue = redis_get(proxyip,proxyport,key).redisoper_del()
+  File "D:\pythoncode\godzilla_cmdb\godzilla\core\codiscache\cachekeyoperation.py", line 80, in redisoper_del
+    keyvalue = redisconn.exists(self.key)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\core\utils\redisutils.py", line 31, in exists
+    return  self.__conn.exists(key)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\client.py", line 951, in exists
+    return self.execute_command('EXISTS', name)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\client.py", line 673, in execute_command
+    connection.send_command(*args)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\connection.py", line 610, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\connection.py", line 585, in send_packed_command
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\redis\connection.py", line 489, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 3.3.3.3:8080. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+[2019-01-09 14:57:38,252 ERROR 236184 exception.py 124] - Internal Server Error: /godzilla/cachemanager/redis_del
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'redisip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 50, in redis_del
+    redisip = request.GET["redisip"]
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'redisip'"
+[2019-01-09 14:57:40,267 ERROR 236184 exception.py 124] - Internal Server Error: /godzilla/cachemanager/redis_del
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'redisip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 50, in redis_del
+    redisip = request.GET["redisip"]
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'redisip'"
+[2019-01-09 14:58:27,684 ERROR 236184 exception.py 124] - Internal Server Error: /godzilla/cachemanager/redis_del
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'redisip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 50, in redis_del
+    redisip = request.GET["redisip"]
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'redisip'"
+[2019-01-09 14:58:59,496 WARNING 236184 base.py 152] - Not Found: /godzilla/cachemanager/vaguedel
+[2019-01-09 15:29:03,164 ERROR 181260 exception.py 124] - Internal Server Error: /godzilla/cachemanager/matchingdel
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 69, in matchingdel
+    redisdelvalue = redis_del(proxyip,proxyport,key).matchingdel()
+TypeError: matchingdel() missing 1 required positional argument: 'subnode'
+[2019-01-09 15:29:56,858 DEBUG 237784 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 15:29:56,969 DEBUG 237784 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 15:45:02,587 DEBUG 234840 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 15:45:02,677 DEBUG 234840 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 15:45:02,825 ERROR 208092 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 15:45:02,838 ERROR 238076 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 15:53:24,743 WARNING 235552 base.py 152] - Not Found: /godzilla/cachemanager/vaguedel
+[2019-01-09 15:53:33,713 DEBUG 235552 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 15:53:33,792 DEBUG 235552 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 15:56:22,823 DEBUG 235552 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 15:56:22,932 DEBUG 235552 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 15:56:55,849 DEBUG 235552 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 15:56:55,928 DEBUG 235552 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 15:56:56,915 ERROR 46144 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 15:56:56,945 ERROR 233064 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 15:58:07,651 DEBUG 236432 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 15:58:07,748 DEBUG 236432 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 15:58:08,916 ERROR 234092 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 15:58:08,927 ERROR 237332 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 15:58:09,270 ERROR 236432 exception.py 124] - Internal Server Error: /godzilla/cachemanager/matchingdel
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 71, in matchingdel
+    return HttpResponse(json.loads(redisdelvalue))
+  File "D:\Python\Python36\lib\json\__init__.py", line 348, in loads
+    'not {!r}'.format(s.__class__.__name__))
+TypeError: the JSON object must be str, bytes or bytearray, not 'list'
+[2019-01-09 15:58:31,534 DEBUG 236432 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 15:58:31,628 DEBUG 236432 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 15:58:32,787 ERROR 238484 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 15:58:32,809 ERROR 233716 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 15:58:33,152 ERROR 236432 exception.py 124] - Internal Server Error: /godzilla/cachemanager/matchingdel
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\rediscacheoperation.py", line 71, in matchingdel
+    return HttpResponse(json.loads(redisdelvalue))
+  File "D:\Python\Python36\lib\json\__init__.py", line 348, in loads
+    'not {!r}'.format(s.__class__.__name__))
+TypeError: the JSON object must be str, bytes or bytearray, not 'list'
+[2019-01-09 16:01:36,979 DEBUG 235216 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 16:01:37,060 DEBUG 235216 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 16:01:37,187 ERROR 238184 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 16:01:37,215 ERROR 181612 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 16:01:56,854 DEBUG 214124 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 16:01:56,963 DEBUG 214124 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 16:01:57,107 ERROR 236952 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 16:01:57,119 ERROR 238180 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 16:03:12,118 DEBUG 46144 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 16:03:12,192 DEBUG 46144 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 16:03:12,336 ERROR 216060 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 16:03:12,360 ERROR 234996 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 16:03:29,872 DEBUG 238196 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 16:03:29,951 DEBUG 238196 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 16:03:30,067 ERROR 238052 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 16:03:30,097 ERROR 237820 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 16:04:36,427 DEBUG 238504 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 16:04:36,532 DEBUG 238504 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 16:04:36,670 ERROR 237980 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 16:04:36,689 ERROR 238384 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 16:05:35,758 DEBUG 235532 connectionpool.py 207] - Starting new HTTP connection (1): 118.89.18.234
+[2019-01-09 16:05:35,838 DEBUG 235532 connectionpool.py 395] - http://118.89.18.234:11080 "GET /proxy/slots HTTP/1.1" 200 None
+[2019-01-09 16:05:36,792 ERROR 236824 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 16:05:36,846 ERROR 238480 cachekeyoperation.py 107] - wrong number of arguments for 'del' command
+[2019-01-09 16:06:02,532 WARNING 235532 base.py 152] - Not Found: /godzilla/cachemanager/graynumber

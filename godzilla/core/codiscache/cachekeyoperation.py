@@ -81,7 +81,7 @@ class cacheoperation():
         if keyvalue is True:
             try:
                 keyvalue = str(redisconn.delete(self.key))
-                if keyvalue == None:
+                if keyvalue == "None":
                     keyvalue = "节点 %s 清除key %s  成功" % (self.proxyip, self.key)
             except BaseException as e:
                 logger.error("删除key %s ,ERROR:%s" % (self.key, e))
@@ -105,11 +105,11 @@ class cacheoperation():
 
         except BaseException as e:
             logger.error(e)
-            delkey = "当前节点%s  无相似key" % subnode
+            delkey = 0
 
         delkeysum = dict(node=subnode, delkeysum=delkey)
 
-        return delkeysum
+        return json.dumps(delkeysum)
 
     def TheadPool(self):
         p = Pool(processes=5)
@@ -136,13 +136,11 @@ class cacheoperation():
 if __name__ == '__main__':
     # pass
     test = cacheoperation
-    print(test("118.89.18.234","19000","nihao*").TheadPool())
-    #
-    #
-    #
-    #
-    #
-    #
+    testvalue = test("118.89.18.234","19000","nihao*").TheadPool()
+    print(testvalue)
+
+
+
     # # test = pullsubnode
     # # print(test("118.89.18.234","19000").subnode())
     #

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'css/font.css'%}">
+    <link rel="stylesheet" href="{% static 'css/xadmin.css'%}">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'lib/layui/layui.js'%}" charset="utf-8"></script>
+    <script type="text/javascript" src="{% static 'js/xadmin.js'%}"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="x-body">
+        <div class="layui-form">
+            {% if redisinfo %}
+            {% for redis in  redisinfo %}
+
+
+          <div class="layui-form-item">
+              <label  class="layui-form-label">
+                  <span class="x-red">*</span>Porxy_name
+              </label>
+              <div class="layui-input-inline">
+                  <input style="background-color: #D3D3D3" type="text" id="proxyname" name="proxyname" disabled  required="" value="{{ redis.proxy_name }}"
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label  class="layui-form-label">
+                  <span class="x-red">*</span>Proxy_ip
+              </label>
+              <div class="layui-input-inline">
+                  <input style="background-color: #D3D3D3" type="text" id="proxyip" name="proxyip" disabled required=""  value="{{ redis.redis_ip }}"
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+          <div class="layui-form-item">
+                <label  class="layui-form-label">
+                    <span class="x-red">*</span>Proxy_port
+                </label>
+                <div class="layui-input-inline">
+                    <input style="background-color: #D3D3D3" type="text" id="proxyport" name="proxyport"  disabled required="" value="{{ redis.redis_port }}"
+                           autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+          <div class="layui-form-item">
+                <label  class="layui-form-label">
+                    <span class="x-red">*</span>KEY
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="key" name="key" required=""
+                           autocomplete="off" class="layui-input">
+                </div>
+          </div>
+
+
+        {% endfor %}
+        {% endif %}
+
+          <div class="layui-form-item">
+              <label  class="layui-form-label">
+              </label>
+              <button  class="layui-btn layui-btn-radius layui-btn-normal"  lay-filter="add" lay-submit="" onclick="matchingdel()">
+                  模糊删除
+              </button>
+          </div>
+        </div>
+    </div>
+    <script>
+
+
+        function matchingdel() {
+            var params = [];
+            var proxyip = document.getElementById("proxyip").value;
+            var proxyport = document.getElementById("proxyport").value;
+            var key = document.getElementById("key").value;
+            var redisdict = {"proxyip":proxyip,"proxyport":proxyport,"key":key};
+            params.push(redisdict);
+            var redisinfo = JSON.stringify(params);
+            var host = window.location.host;
+            var urltest = 'http://' + host + '/godzilla/cachemanager/matchingdel';
+
+           $.ajax({
+               type:"POST",
+               url:urltest,
+               datatype:"json",
+               data:redisinfo,
+               success: function (data) {
+
+                     layer.alert(data, {icon: 6},function () {
+                         // 获得frame索引
+                         var index = parent.layer.getFrameIndex(window.name);
+                         //关闭当前frame
+                         parent.layer.close(index);
+                     });
+               },
+                error: function (data) {
+                    layer.alert(data, {icon: 6}, function () {
+                        // 获得frame索引
+                        var index = parent.layer.getFrameIndex(window.name);
+                        //关闭当前frame
+                        parent.layer.close(index);
+                    });
+                }
+
+           });
+        }
+
+
+
+    </script>
+
+  </body>
+
+</html>
