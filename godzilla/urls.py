@@ -28,6 +28,9 @@ urlpatterns = [
     url(r'^cachemanager/redis_get', views.redis_get, name="redis_get"),
     url(r'^cachemanager/redis_del', views.redis_del, name="redis_del"),
     url(r'^cachemanager/matchingdel', views.matchingdel, name="matchingdel"),
+    url(r'^cachemanager/graynumber', views.graylist, name="graynumber"),
+    url(r'^cachemanager/grayadd', views.grayadd, name="grayadd"),
+    url(r'^cachemanager/delphone', views.delphone, name="delphone"),
 
     url(r'^permanager/useradd',views.useradd,name="useradd"),
 

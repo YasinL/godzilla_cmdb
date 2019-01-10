@@ -25,6 +25,14 @@ def graynumber():
     pass
 
 
+def tenginehosts():
+    hostlist = []
+    tenginehosttable = tenginehost.objects.all().values("host","hostredisport")
+    for grayhost in  tenginehosttable:
+        hostlist.append(grayhost)
+
+    return hostlist
+
 
 
 
@@ -46,10 +54,11 @@ class Gray():
                                                 online=self.phoneonline(), expirytime=expirytime, createuser=username,
                                                 createtime=createtime)
             addphone.save()
-            addstatus = 0
+            addstatus = "添加手机号码 %s 成功" % self.phone
         except BaseException as e:
             logger.error(e)
-            addstatus = 1
+            addstatus = "添加手机号码 %s 失败" % self.phone
+
         return addstatus
 
     def grayaddredisphone(self, duration):
@@ -57,10 +66,10 @@ class Gray():
             keyvalue = self.graymd5value()
             self.__conn.set(keyvalue, keyvalue, duration)
 
-            addredisstatus = 0
+            addredisstatus = "添加手机号码 %s 成功" % self.phone
         except BaseException as e:
             logger.error(e)
-            addredisstatus = 1
+            addredisstatus = "添加手机号码 %s 失败" % self.phone
 
         return addredisstatus
 
@@ -77,10 +86,10 @@ class Gray():
     def graydelphone(self):
         try:
             grayphone.objects.filter(phone__exact=self.phone).delete()
-            delstatus = 0
+            delstatus = "删除手机号码 %s 成功" % self.phone
         except BaseException as e:
             logger.error(e)
-            delstatus = 1
+            delstatus = "删除手机号码 %s 失败" % self.phone
         return delstatus
 
     @classmethod
@@ -108,31 +117,40 @@ class Gray():
         return status
 
 
+
+def graylist(request):
+    if request.method == "POST":
+        pass
+    else:
+        graylist = Gray.graylistphone()
+        return render(request, "gray-list.html", {'graylist': graylist})
+
+
+
+
+
 def grayadd(request):
     Description = "添加灰度白名单"
     if request.method == "POST":
-        grayphone = request.POST.get("grayphone")
-        duration = request.POST.get("duration")
-        if duration is not None and grayphone != '':
-            logger.info(duration)
-            dtime = datetime.datetime.now()
-            un_time = time.mktime(dtime.timetuple())
-            expirytime = int(un_time) + int(duration)
-            expirytime = datetime.datetime.fromtimestamp(expirytime)
-            createtime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S').__str__()
-            for ip in redisip.split(","):
-                Gray(ip, redisport, grayphone).grayaddredisphone(duration=duration)
-            Gray(redisip.split(",")[0], redisport, grayphone).grayaddphone(username=username, expirytime=expirytime,
-                                                                           createtime=createtime)
+        grayrequest = request.body
+        grayinfo = json.loads(grayrequest)
+        grayphone  = grayinfo[0]["phone"]
+        duration  = grayinfo[0]["duration"]
+        username = request.session.get('username')
+        dtime = datetime.datetime.now()
+        un_time = time.mktime(dtime.timetuple())
+        expirytime = int(un_time) + int(duration)
+        expirytime = datetime.datetime.fromtimestamp(expirytime)
+        createtime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S').__str__()
+        for gray in tenginehosts():
+            Gray(gray.get("host"), gray.get("hostredisport"), grayphone).grayaddredisphone(duration=duration)
 
-        else:
-            return HttpResponseRedirect('/grayadd')
+        addphonestatus = Gray(tenginehosts()[0]["host"], tenginehosts()[0]["hostredisport"], grayphone).grayaddphone(username=username, expirytime=expirytime,createtime=createtime)
 
-        return HttpResponseRedirect('/grayadd')
+        return HttpResponse(addphonestatus)
+
     else:
-        graylist = Gray.graylistphone()
-        # return render(request, "gray_phonelist.html")
-        return render(request, "gray_phonelist.html", {'graylist': graylist})
+        return render(request, "gray-add.html")
 
 
 def delphone(request):
@@ -140,43 +158,43 @@ def delphone(request):
     if request.method == "GET":
         grayphone = request.GET.get("phone")
         username = request.session.get("username")
-        for ip in redisip.split(","):
-            Gray(ip, redisport, grayphone).graydelredisphone()
+        for gray in tenginehosts():
+            Gray(gray.get("host"), gray.get("hostredisport"), grayphone).graydelredisphone()
 
-        Gray(redisip.split(",")[0], redisport, grayphone).graydelphone()
-        recordvalue = "删除手机号码： " + grayphone
-        RecordLog(username=username, recordclass=Description, recordvalue=recordvalue).saveecord()
 
-        return render(request, "gray_phonelist.html", {'graylist': Gray.graylistphone()})
+        graydelphone = Gray(tenginehosts()[0]["host"], tenginehosts()[0]["hostredisport"], grayphone).graydelphone()
+
+        return HttpResponse(graydelphone)
 
 
 def redisphonecheckstatus(request):
     Description = "白名单有效检测"
     stat = []
     if request.method == "POST":
-        # data = request.POST.get("phone")
         jsondata = json.loads(request.body)
         username = request.session.get("username")
 
-        logger.info(jsondata)
-
         for data in jsondata:
             phone = data.get("phone")
-            status = Gray(redisip.split(",")[0], redisport, phone).checkstatus()
+            status = Gray(tenginehosts()[0]["host"], tenginehosts()[0]["hostredisport"], phone).checkstatus()
             if status is True:
                 code = 0
             else:
-                Gray(redisip.split(",")[0], redisport, phone).graydelphone()
+                Gray(tenginehosts()[0]["host"], tenginehosts()[0]["hostredisport"], phone).graydelphone()
                 code = 1
 
                 recordvalue = "删除手机号码： " + phone
-                RecordLog(username=username, recordclass=Description, recordvalue=recordvalue).saveecord()
 
-        return HttpResponseRedirect('/grayadd')
+
+
+        return HttpResponseRedirect('/godzilla/cachemanager/grayadd')
 
 
 if __name__ == '__main__':
-    print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S').__str__())
+    test = tenginehosts()
+    print(test[0]["host"])
+
+    # print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S').__str__())
 
     # print(Gray(grayredisip="118.89.18.234",grayredisport="6379",phone=15269136818).graymd5value())
     # Gray("12569136818").conn(grayredisip="118.89.18.234",grayredisport="6379").set("123","33333")

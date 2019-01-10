@@ -17,6 +17,14 @@ from godzilla.core.codiscache.codislist import redisedit
 from godzilla.core.codiscache.codislist import redisupdate
 from godzilla.core.codiscache.codislist import redishostdel
 from godzilla.core.codiscache.codislist import cachelist
+
+
+
+from godzilla.handle.gray import graylist
+from godzilla.handle.gray import grayadd
+from godzilla.handle.gray import delphone
+
+
 from godzilla.handle.decorator_login import login_decorator
 
 
