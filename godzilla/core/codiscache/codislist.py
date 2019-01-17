@@ -25,7 +25,7 @@ def cachelist(request):
         return  render_to_response('cache-list.html',{"redisip":redisip})
 
 
-
+@login_decorator
 def redislist(request):
     redisip = []
     if request.method == "POST":
@@ -38,7 +38,7 @@ def redislist(request):
         return  render_to_response('codis-list.html',{"redisip":redisip})
 
 
-
+@login_decorator
 def redisadd(request):
     if request.method == "POST":
         redis = request.body
@@ -75,7 +75,7 @@ def redisadd(request):
     else:
         return  render_to_response('codis-add.html')
 
-
+@login_decorator
 def redishostdel(request):
     if request.method == "POST":
         pass
@@ -87,7 +87,7 @@ def redishostdel(request):
         return HttpResponseRedirect('/godzilla/platformconf/redislist')
 
 
-
+@login_decorator
 def redisupdate(request):
     if request.method == "POST":
         redis = request.body
@@ -116,7 +116,7 @@ def redisupdate(request):
         return  render_to_response('codis-add.html')
 
 
-
+@login_decorator
 def redisedit(request):
     redisinfo = []
     if request.method == "POST":

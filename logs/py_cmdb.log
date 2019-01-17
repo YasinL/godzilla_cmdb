@@ -1328,3 +1328,125 @@ TypeError: int() argument must be a string, a bytes-like object or a number, not
 [2019-01-10 14:45:00,982 WARNING 264340 base.py 152] - Not Found: /godzilla/cachemanager/redishostdel
 [2019-01-10 16:48:34,864 WARNING 261264 base.py 152] - Not Found: /shopping
 [2019-01-10 18:03:40,241 WARNING 261264 base.py 152] - Not Found: /godzilla/hostmanager/hostlist
+[2019-01-11 14:23:55,572 INFO 280512 login.py 17] - admin
+[2019-01-11 14:24:07,926 WARNING 280512 base.py 152] - Not Found: /godzilla/platformconf/hostconfig
+[2019-01-11 15:12:34,611 WARNING 282448 base.py 152] - Not Found: /godzilla/hostmanager/hostlist
+[2019-01-11 15:19:47,795 WARNING 287108 base.py 152] - Not Found: /godzilla/hostmanager/hostmanager/hostlist/
+[2019-01-11 15:21:58,142 WARNING 286204 base.py 152] - Not Found: /godzilla/hostmanager/hostmonitor
+[2019-01-11 15:22:47,902 WARNING 286204 base.py 152] - Not Found: /godzilla/hostmanager/redisadd
+[2019-01-11 15:23:25,103 WARNING 286204 base.py 152] - Not Found: /godzilla/hostmanager/hostmonitor
+[2019-01-11 15:30:33,599 WARNING 286204 base.py 152] - Not Found: /godzilla/hostmanager/hostmonitor
+[2019-01-11 15:30:37,751 WARNING 286204 base.py 152] - Not Found: /godzilla/hostmanager/redisedit
+[2019-01-11 15:30:41,039 WARNING 286204 base.py 152] - Not Found: /godzilla/hostmanager/redisedit
+[2019-01-11 15:30:46,611 WARNING 286204 base.py 152] - Not Found: /godzilla/hostmanager/redisedit
+[2019-01-11 15:30:50,168 WARNING 286204 base.py 152] - Not Found: /godzilla/hostmanager/redisedit
+[2019-01-11 15:30:54,687 WARNING 286204 base.py 152] - Not Found: /godzilla/hostmanager/redisedit
+[2019-01-11 15:31:05,635 WARNING 286204 base.py 152] - Not Found: /godzilla/hostmanager/redisedit
+[2019-01-11 15:31:20,443 WARNING 286204 base.py 152] - Not Found: /godzilla/platformconf/hostconfig
+[2019-01-11 15:35:57,551 INFO 287016 login.py 17] - wangxun
+[2019-01-11 15:43:33,049 INFO 288912 login.py 17] - admin
+[2019-01-11 15:57:29,057 ERROR 283748 exception.py 124] - Internal Server Error: /godzilla/welcome
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\decorator_login.py", line 15, in check_login
+    permission_url = per.permission_url
+AttributeError: 'dict' object has no attribute 'permission_url'
+[2019-01-11 15:58:07,783 WARNING 234192 base.py 152] - Not Found: /godzilla/dashboard/dashboard
+[2019-01-11 15:58:14,111 ERROR 234192 exception.py 124] - Internal Server Error: /godzilla/welcome
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\decorator_login.py", line 16, in check_login
+    if path == permission_url.path.split("/")[2]:
+AttributeError: 'str' object has no attribute 'path'
+[2019-01-11 15:59:39,032 ERROR 286776 exception.py 124] - Internal Server Error: /godzilla/welcome
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\decorator_login.py", line 16, in check_login
+    print(permission_url.path.split("/")[2])
+AttributeError: 'str' object has no attribute 'path'
+[2019-01-11 15:59:40,204 ERROR 286776 exception.py 124] - Internal Server Error: /godzilla/welcome
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\decorator_login.py", line 16, in check_login
+    print(permission_url.path.split("/")[2])
+AttributeError: 'str' object has no attribute 'path'
+[2019-01-11 15:59:42,091 ERROR 286776 exception.py 124] - Internal Server Error: /godzilla/welcome
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\decorator_login.py", line 16, in check_login
+    print(permission_url.path.split("/")[2])
+AttributeError: 'str' object has no attribute 'path'
+[2019-01-11 16:00:01,851 ERROR 288828 exception.py 124] - Internal Server Error: /godzilla/welcome
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\decorator_login.py", line 16, in check_login
+    print(permission_url.path.split("/")[2])
+AttributeError: 'str' object has no attribute 'path'
+[2019-01-11 16:00:05,289 ERROR 288828 exception.py 124] - Internal Server Error: /godzilla/welcome
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\decorator_login.py", line 16, in check_login
+    print(permission_url.path.split("/")[2])
+AttributeError: 'str' object has no attribute 'path'
+[2019-01-11 16:00:33,180 ERROR 265384 exception.py 124] - Internal Server Error: /godzilla/welcome
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\decorator_login.py", line 16, in check_login
+    print(permission_url.path.split("/")[2])
+AttributeError: 'str' object has no attribute 'path'
+[2019-01-11 16:04:29,459 WARNING 288492 base.py 152] - Not Found: /godzilla/platformconf/hostconfig
+[2019-01-11 16:29:55,846 ERROR 289152 exception.py 124] - Internal Server Error: /godzilla/welcome
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view godzilla.handle.decorator_login.check_login didn't return an HttpResponse object. It returned None instead.
+[2019-01-11 16:31:32,835 WARNING 289072 base.py 152] - Not Found: /godzilla/hostmanager/redisadd
+[2019-01-11 16:32:25,667 WARNING 289072 base.py 152] - Not Found: /godzilla/dashboard/dashboard
+[2019-01-11 16:57:15,211 WARNING 289072 base.py 152] - Not Found: /
+[2019-01-11 16:57:16,063 WARNING 289072 base.py 152] - Not Found: /favicon.ico
+[2019-01-11 16:57:26,319 INFO 289072 login.py 17] - wangxun
+[2019-01-11 16:57:31,930 WARNING 289072 base.py 152] - Not Found: /godzilla/platformconf/hostconfig
+[2019-01-11 16:58:36,875 WARNING 284236 base.py 152] - Not Found: /godzilla
+[2019-01-11 17:01:36,809 INFO 284236 login.py 17] - admin

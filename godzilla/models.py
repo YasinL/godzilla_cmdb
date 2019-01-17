@@ -25,7 +25,11 @@ class users(AbstractUser):
 
 class ansible_host(models.Model):
     hostip =  models.GenericIPAddressField()
-    ansible_groupid = models.CharField(max_length=200, null=True)
+    hostname = models.CharField(max_length=50, null=True)
+    hostport = models.CharField(max_length=50, null=True)
+    project_owner = models.CharField(max_length=50, null=True)
+    idc_name = models.CharField(max_length=50, null=True)
+    ansible_groupid = models.CharField(max_length=20, null=True)
 
 class ansible_group(models.Model):
     hostgroup = models.CharField(max_length=200,null=True)

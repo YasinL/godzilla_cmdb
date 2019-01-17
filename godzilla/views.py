@@ -19,6 +19,9 @@ from godzilla.core.codiscache.codislist import redishostdel
 from godzilla.core.codiscache.codislist import cachelist
 
 
+from  godzilla.handle.HostAssets import hostlist
+
+
 
 from godzilla.handle.gray import graylist
 from godzilla.handle.gray import grayadd
@@ -42,9 +45,11 @@ def index(request):
         return render(request,'login.html')
 
 '''登录验证'''
-@login_decorator
+# @login_decorator
 def welcome(requests):
+    username = requests.session.get('username')
     if requests.method == "GET":
+
         return render(requests,"welcome.html")
 
 

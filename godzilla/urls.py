@@ -31,6 +31,7 @@ urlpatterns = [
     url(r'^cachemanager/graynumber', views.graylist, name="graynumber"),
     url(r'^cachemanager/grayadd', views.grayadd, name="grayadd"),
     url(r'^cachemanager/delphone', views.delphone, name="delphone"),
+    url(r'^hostmanager/hostlist', views.hostlist, name="hostlist"),
 
     url(r'^permanager/useradd',views.useradd,name="useradd"),
 

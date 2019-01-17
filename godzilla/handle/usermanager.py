@@ -25,6 +25,8 @@ def userlist(request):
         pass
 
     else:
+        print(request.path)
+        print(request.path.split("/")[2])
         usertable = users.objects.all().values()
         for user in usertable:
             userlist.append(user)
