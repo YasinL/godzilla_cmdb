@@ -45,20 +45,21 @@ def hostadd(request):
         project_owner  = hostinfo[0]["project_owner"]
         idc_name  = hostinfo[0]["idc_name"]
         try:
-            hosthost = ansible_host.objects.filter(host_ip__exact=hostip)
+            hosthost = ansible_host.objects.filter(hostip__exact=hostip).values()
+            print(len(list(hosthost)))
             if len(list(hosthost)) == 0:
                 try:
                     hosttable = ansible_host.objects.create(hostip=hostip,hostport=hostport,hostname=hostname,
                                                             project_owner=project_owner,idc_name=idc_name)
                     hosttable.save()
 
-                    hosterror = "缓存添加成功"
+                    hosterror = "主机添加成功"
 
                 except BaseException as e:
                     logger.error(e)
-                    hosterror = "缓存添加失败"
+                    hosterror = "主机添加失败"
             else:
-                hosterror = "缓存地址已存在无需重复添加"
+                hosterror = "主机地址已存在无需重复添加"
 
         except BaseException as e:
             logger.error(e)
@@ -67,7 +68,7 @@ def hostadd(request):
         return HttpResponse(hosterror)
 
     else:
-        return  render_to_response('codis-add.html')
+        return  render_to_response('host-add.html')
 
 
 def hostdel(request):
@@ -75,10 +76,15 @@ def hostdel(request):
         pass
     else:
         hostip = request.GET["hostip"]
+        try:
+            ansible_host.objects.filter(hostip=hostip).delete()
+            hostdelerror = "删除主机成功"
+        except BaseException as e:
+            logger.error(e)
+            hostdelerror = "删除主机失败"
 
-        ansible_host.objects.filter(hostip=hostip).delete()
 
-        return HttpResponseRedirect('/godzilla/platformconf/hostlist')
+        return  HttpResponse(hostdelerror)
 
 
 
@@ -94,11 +100,11 @@ def hostupdate(request):
         try:
             ansible_host.objects.filter(hostip__exact=hostip).update(hostip=hostip,hostport=hostport,hostname=hostname,
                                                             project_owner=project_owner,idc_name=idc_name)
-            hosterror = "缓存信息更新成功"
+            hosterror = "主机信息更新成功"
 
         except BaseException as e:
             logger.error(e)
-            hosterror = "缓存信息更新失败"
+            hosterror = "主机信息更新失败"
 
         return HttpResponse(hosterror)
 
@@ -118,4 +124,4 @@ def hostedit(request):
         for host in hosttable:
             hostinfo.append(host)
 
-        return  render_to_response('codis-edit.html',{"hostinfo":hostinfo})
+        return  render_to_response('host-edit.html',{"hostinfo":hostinfo})

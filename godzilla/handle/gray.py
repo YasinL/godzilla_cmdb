@@ -172,6 +172,7 @@ def redisphonecheckstatus(request):
     stat = []
     if request.method == "POST":
         jsondata = json.loads(request.body)
+        print(jsondata)
         username = request.session.get("username")
 
         for data in jsondata:
@@ -188,6 +189,7 @@ def redisphonecheckstatus(request):
 
 
         return HttpResponseRedirect('/godzilla/cachemanager/grayadd')
+        # return  HttpResponse.status_code(200)
 
 
 if __name__ == '__main__':

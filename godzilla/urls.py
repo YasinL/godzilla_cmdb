@@ -31,7 +31,12 @@ urlpatterns = [
     url(r'^cachemanager/graynumber', views.graylist, name="graynumber"),
     url(r'^cachemanager/grayadd', views.grayadd, name="grayadd"),
     url(r'^cachemanager/delphone', views.delphone, name="delphone"),
+    url(r'^cachemanager/redisphonecheckstatus', views.redisphonecheckstatus, name="redisphonecheckstatus"),
     url(r'^hostmanager/hostlist', views.hostlist, name="hostlist"),
+    url(r'^hostmanager/hostadd', views.hostadd, name="hostadd"),
+    url(r'^hostmanager/hostdel', views.hostdel, name="hostdel"),
+    url(r'^hostmanager/hostedit', views.hostedit, name="hostedit"),
+    url(r'^hostmanager/hostupdate', views.hostupdate, name="hostupdate"),
 
     url(r'^permanager/useradd',views.useradd,name="useradd"),
 

@@ -30,7 +30,7 @@
 
       <xblock>
         <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
-        <button class="layui-btn" onclick="x_admin_show('添加缓存','./redisadd')"><i class="layui-icon"></i>添加</button>
+        <button class="layui-btn" onclick="x_admin_show('添加缓存','./hostadd')"><i class="layui-icon"></i>添加</button>
       </xblock>
       <table class="layui-table">
         <thead>
@@ -59,10 +59,10 @@
             <td>{{ results.idc_name }}</td>
             <td>{{ results.project_owner }}</td>
            <td class="td-manage">
-             <a title="编辑"  onclick="x_admin_show('编辑','./redisedit?redisip={{ redis.redis_ip }}')" href="javascript:;">
+             <a title="编辑"  onclick="x_admin_show('编辑','./hostedit?hostip={{ results.hostip }}')" href="javascript:;">
              <i class="layui-icon">&#xe628;<i>
 
-              <a title="编辑"  onclick="x_admin_show('编辑','./redisedit?redisip={{ redis.redis_ip }}')" href="javascript:;">
+              <a title="编辑"  onclick="x_admin_show('编辑','./hostdel?hostip={{ results.hostip }}')" href="javascript:;">
                 <i class="layui-icon">&#xe642;</i>
               </a>
               <a title="删除" onclick="member_del(this,'要删除的id')" href="./redishostdel?rowid={{ redis.id }}">
@@ -74,7 +74,7 @@
         {% endif %}
         </tbody>
       </table>
-      <div class="page">
+      <!--<div class="page">-->
         <div>
           {{ pager_str|safe }}
           <!--<a class="prev" href="">&lt;&lt;</a>-->
@@ -82,7 +82,7 @@
           <!--<span class="current">2</span>-->
           <!--<a class="next" href="">&gt;&gt;</a>-->
         </div>
-      </div>
+      <!--</div>-->
 
     </div>
     <script>

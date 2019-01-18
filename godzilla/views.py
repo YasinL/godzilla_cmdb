@@ -20,12 +20,18 @@ from godzilla.core.codiscache.codislist import cachelist
 
 
 from  godzilla.handle.HostAssets import hostlist
+from  godzilla.handle.HostAssets import hostadd
+from  godzilla.handle.HostAssets import hostdel
+from  godzilla.handle.HostAssets import hostedit
+from  godzilla.handle.HostAssets import hostupdate
+
 
 
 
 from godzilla.handle.gray import graylist
 from godzilla.handle.gray import grayadd
 from godzilla.handle.gray import delphone
+from godzilla.handle.gray import redisphonecheckstatus
 
 
 from godzilla.handle.decorator_login import login_decorator

@@ -31,9 +31,9 @@
       <xblock>
         <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
         <button class="layui-btn" onclick="x_admin_show('添加缓存','./grayadd')"><i class="layui-icon"></i>添加</button>
-        <span class="x-right" style="line-height:40px">共有数据：88 条</span>
+        <span id="phonesum" class="x-right" style="line-height:40px"></span>
       </xblock>
-      <table class="layui-table" lay-even lay-skin="nob">
+      <table class="layui-table" lay-even lay-skin="nob" id="phonelist">
         <thead>
           <tr>
             <th>
@@ -60,7 +60,7 @@
             <td>{{ gray.createuser }}</td>
             <td>{{ gray.phoneencrypt }}</td>
            <td class="td-manage">
-              <a title="删除" onclick="member_del(this,'要删除的id')">
+              <a title="删除" onclick="member_del(this,{{ gray.phone }})">
                 <i class="layui-icon">&#xe640;</i>
               </a>
             </td>
@@ -69,14 +69,14 @@
         {% endif %}
         </tbody>
       </table>
-      <div class="page">
-        <div>
-          <a class="prev" href="">&lt;&lt;</a>
-          <a class="num" href="">1</a>
-          <span class="current">2</span>
-          <a class="next" href="">&gt;&gt;</a>
-        </div>
-      </div>
+      <!--<div class="page">-->
+        <!--<div>-->
+          <!--<a class="prev" href="">&lt;&lt;</a>-->
+          <!--<a class="num" href="">1</a>-->
+          <!--<span class="current">2</span>-->
+          <!--<a class="next" href="">&gt;&gt;</a>-->
+        <!--</div>-->
+      <!--</div>-->
 
     </div>
     <script>
@@ -149,16 +149,16 @@
               //     }
               // });
 
-                          var phone = document.getElementById("phone").value;
-
+                          // var phone = document.getElementById("phone").value;
+            var phone = id;
             var host = window.location.host;
-            var urltest = 'http://' + host + '/godzilla/cachemanager/delphone';
+            var urltest = 'http://' + host + '/godzilla/cachemanager/delphone?phone=' + phone;
 
            $.ajax({
                type:"GET",
                url:urltest,
                datatype:"json",
-               data:phone,
+               // data:phone,
                success: function (data) {
                      layer.msg(data, {icon: 6},function () {
                          // 获得frame索引
@@ -201,6 +201,16 @@
         });
       }
     </script>
+    <script src="{% static 'js/checkredisphone.js'%}"></script>
+  <script type="application/javascript">
+    $(document).ready(function () {
+        var  rows = document.getElementById("phonelist").rows.length-1;
+        var value = "白名单手机号：" + rows + "个";
+        $('#phonesum').html(value)
+    });
+
+
+</script>
   </body>
 
 </html>
