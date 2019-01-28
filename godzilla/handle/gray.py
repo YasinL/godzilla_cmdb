@@ -8,6 +8,7 @@ from django.shortcuts import render, render_to_response, HttpResponse, HttpRespo
 from godzilla.models import grayphone
 from godzilla.models import tenginehost
 from godzilla.core.Log import logger
+from godzilla.core.RecordLog import RecordLog
 import datetime
 import time
 import json
@@ -147,6 +148,11 @@ def grayadd(request):
 
         addphonestatus = Gray(tenginehosts()[0]["host"], tenginehosts()[0]["hostredisport"], grayphone).grayaddphone(username=username, expirytime=expirytime,createtime=createtime)
 
+        recordvalue = "添加手机号 %s 到灰度白名单"  % grayphone
+        RecordLog(username=username, recordclass=Description, recordvalue=recordvalue).saveecord()
+
+
+
         return HttpResponse(addphonestatus)
 
     else:
@@ -163,6 +169,11 @@ def delphone(request):
 
 
         graydelphone = Gray(tenginehosts()[0]["host"], tenginehosts()[0]["hostredisport"], grayphone).graydelphone()
+
+
+        recordvalue = "从白名单中删除手机号"  % grayphone
+        RecordLog(username=username, recordclass=Description, recordvalue=recordvalue).saveecord()
+
 
         return HttpResponse(graydelphone)
 
@@ -186,6 +197,7 @@ def redisphonecheckstatus(request):
 
                 recordvalue = "删除手机号码： " + phone
 
+                RecordLog(username=username, recordclass=Description, recordvalue=recordvalue).saveecord()
 
 
         return HttpResponseRedirect('/godzilla/cachemanager/grayadd')

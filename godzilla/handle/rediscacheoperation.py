@@ -9,8 +9,12 @@ from godzilla.models import RedisHost
 from godzilla.core.codiscache.cachekeyoperation import cacheoperation
 from godzilla.core.Log import logger
 from godzilla.handle.decorator_login import login_decorator
+from godzilla.core.RecordLog import RecordLog
+
 
 def redis_get(request):
+    Description = "缓存查询"
+    username = request.session.get('username')
     redisinfo = []
     if request.method == "POST":
         redis = request.body
@@ -20,6 +24,10 @@ def redis_get(request):
         key  = redisinfo[0]["key"]
         redis_get = cacheoperation
         redisgetvalue = redis_get(proxyip,proxyport,key).redisoper_get()
+
+        recordvalue = "查询缓存 %s" % key
+
+        RecordLog(username=username, recordclass=Description, recordvalue=recordvalue).saveecord()
 
         return HttpResponse(redisgetvalue)
 
@@ -35,6 +43,8 @@ def redis_get(request):
 
 
 def redis_del(request):
+    Description = "缓存删除"
+    username = request.session.get('username')
     redisinfo = []
     if request.method == "POST":
         redis = request.body
@@ -44,6 +54,12 @@ def redis_del(request):
         key  = redisinfo[0]["key"]
         redis_del = cacheoperation
         redisdelvalue = redis_del(proxyip,proxyport,key).redisoper_del()
+
+        recordvalue = "删除缓存 %s" % key
+
+        RecordLog(username=username, recordclass=Description, recordvalue=recordvalue).saveecord()
+
+
         return HttpResponse(redisdelvalue)
 
     else:
@@ -58,6 +74,8 @@ def redis_del(request):
 
 
 def matchingdel(request):
+    Description = "缓存模糊删除"
+    username = request.session.get('username')
     redisinfo = []
     if request.method == "POST":
         redis = request.body
@@ -67,6 +85,10 @@ def matchingdel(request):
         key  = redisinfo[0]["key"]
         redis_del = cacheoperation
         redisdelvalue = redis_del(proxyip,proxyport,key).TheadPool()
+
+        recordvalue = "模糊删除缓存 %s" % key
+
+        RecordLog(username=username, recordclass=Description, recordvalue=recordvalue).saveecord()
 
         return HttpResponse(redisdelvalue)
 

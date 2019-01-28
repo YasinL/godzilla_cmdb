@@ -35,22 +35,42 @@
           </div>
           <div class="layui-form-item">
               <label class="layui-form-label">
-                  <span class="x-red">*</span>IP
+                  <span class="x-red">*</span>proxy_ip
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="ip" name="ip" required=""
+                  <input type="text" id="proxy_ip" name="ip" required=""
                   autocomplete="off" class="layui-input">
               </div>
           </div>
           <div class="layui-form-item">
               <label class="layui-form-label">
-                  <span class="x-red">*</span>端口
+                  <span class="x-red">*</span>proxy_port
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="port" name="port" required=""
+                  <input type="text" id="proxy_port" name="port" required=""
                   autocomplete="off" class="layui-input">
               </div>
           </div>
+                      <div class="layui-form-item">
+              <label class="layui-form-label">
+                  <span class="x-red">*</span>admin_ip
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="admin_ip" name="ip" required=""
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">
+                  <span class="x-red">*</span>admin_port
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" id="admin_port" name="port" required=""
+                  autocomplete="off" class="layui-input">
+              </div>
+          </div>
+
+
           <div class="layui-form-item">
               <label class="layui-form-label"><span class="x-red">*</span>类型</label>
               <div class="layui-input-inline">
@@ -99,14 +119,16 @@
         function cache() {
             var params = [];
             var proxy_name = document.getElementById("proxy_name").value;
-            var ip = document.getElementById("ip").value;
-            var port = document.getElementById("port").value;
+            var proxy_ip = document.getElementById("proxy_ip").value;
+            var proxy_port = document.getElementById("proxy_port").value;
+            var admin_ip = document.getElementById("admin_ip").value;
+            var admin_port = document.getElementById("admin_port").value;
             var typeid = $('#type option:selected').val();
             var typename = $('#type option:selected').text();
             var owner = document.getElementById("owner").value;
             var principal = document.getElementById("principal").value;
 
-            var redis = {"proxy_name":proxy_name,"ip":ip,"port":port,"typeid":typeid,"typename":typename,"owner":owner,"principal":principal};
+            var redis = {"proxy_name":proxy_name,"proxy_ip":proxy_ip,"proxy_port":proxy_port,"admin_ip":admin_ip,"admin_port":admin_port,"typeid":typeid,"typename":typename,"owner":owner,"principal":principal};
             params.push(redis);
             var redisinfo = JSON.stringify(params);
             var host = window.location.host;

@@ -65,24 +65,24 @@ class Pager(object):
 
             #判断是否为当前页
             if i == self.current_page:
-                temp = '<a style="color:red;font-size:26px;padding: 5px" href="%s?page=%d">%d</a>' % (base_url,i,i)
+                temp = '<a class="current" style="color:red;font-size:26px;padding: 5px" href="%s?page=%d">%d</a>' % (base_url,i,i)
             else:
-                temp = '<a style="padding: 5px" href="%s?page=%d">%d</a>' % (base_url,i,i)
+                temp = '<a class="current"  style="padding: 5px" href="%s?page=%d">%d</a>' % (base_url,i,i)
 
             # 把标签拼接然后返回给前端
             pager_list.append(temp)
 
         #上一页
         if self.current_page > 1:
-            pre_page = '<a href="%s?page=%d">上一页</a>' % (base_url, self.current_page - 1)
+            pre_page = '<a lass="prev" href="%s?page=%d">上一页</a>' % (base_url, self.current_page - 1)
         else:
             # javascript:void(0) 什么都不干
-            pre_page = '<a href="javascript:void(0);">上一页</a>'
+            pre_page = '<a  class="prev" href="javascript:void(0);">上一页</a>'
         #下一页
         if self.current_page >= all_page:
-            next_page = '<a href="javascript:void(0);">下一页</a>'
+            next_page = '<a class="next" href="javascript:void(0);">下一页</a>'
         else:
-            next_page = '<a href="%s?page=%d">下一页</a>' % (base_url, self.current_page + 1)
+            next_page = '<a class="next" href="%s?page=%d">下一页</a>' % (base_url, self.current_page + 1)
 
         pager_list.insert(0, pre_page)
         pager_list.append(next_page)
@@ -97,7 +97,7 @@ def recordlist(request):
 
 
     all_item = RecordLogTable.objects.all().count()
-    pager_str = page_obj.page_str(all_item,'/recordlist/')
+    pager_str = page_obj.page_str(all_item,'recordlist/')
 
 
 

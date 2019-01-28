@@ -1,0 +1,278 @@
+[2019-01-28 13:42:46,093 ERROR 9312 tenginehost.py 63] - Cannot resolve keyword 'host' into field. Choices are: ansible_groupid, hostip, hostname, hostport, id, idc_name, project_owner
+[2019-01-28 13:52:00,812 ERROR 1296 exception.py 124] - Internal Server Error: /godzilla/platformconf/tenginehostdel
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'hostip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\handle\tenginehost.py", line 76, in tenginehostdel
+    hostip = request.GET["hostip"]
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'hostip'"
+[2019-01-28 13:58:22,368 WARNING 1296 base.py 152] - Not Found: /godzilla/cachemanager/tenginehostdel
+[2019-01-28 15:14:42,803 WARNING 5380 base.py 152] - Not Found: /godzilla/recordlist/recordlist
+[2019-01-28 15:15:14,967 WARNING 5380 base.py 152] - Not Found: /godzilla/permanager/managerslist
+[2019-01-28 15:22:14,028 ERROR 6244 exception.py 124] - Internal Server Error: /godzilla/recordlist/recordlist
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 916, in connect
+    **kwargs)
+  File "D:\Python\Python36\lib\socket.py", line 722, in create_connection
+    raise err
+  File "D:\Python\Python36\lib\socket.py", line 713, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\core\RecordLog.py", line 99, in recordlist
+    all_item = RecordLogTable.objects.all().count()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 369, in count
+    return self.query.get_count(using=self.db)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 476, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 457, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 833, in execute_sql
+    cursor = self.connection.cursor()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+[2019-01-28 15:22:35,796 ERROR 6244 exception.py 124] - Internal Server Error: /godzilla/recordlist/recordlist
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 916, in connect
+    **kwargs)
+  File "D:\Python\Python36\lib\socket.py", line 722, in create_connection
+    raise err
+  File "D:\Python\Python36\lib\socket.py", line 713, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\pythoncode\godzilla_cmdb\godzilla\core\RecordLog.py", line 99, in recordlist
+    all_item = RecordLogTable.objects.all().count()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 369, in count
+    return self.query.get_count(using=self.db)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 476, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\query.py", line 457, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 833, in execute_sql
+    cursor = self.connection.cursor()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+[2019-01-28 15:22:44,454 ERROR 6244 exception.py 124] - Internal Server Error: /godzilla/recordlist/recordlist
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 202, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 916, in connect
+    **kwargs)
+  File "D:\Python\Python36\lib\socket.py", line 722, in create_connection
+    raise err
+  File "D:\Python\Python36\lib\socket.py", line 713, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\deprecation.py", line 126, in __call__
+    response = self.process_response(request, response)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\middleware.py", line 47, in process_response
+    if request.session.get_expire_at_browser_close():
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 292, in get_expire_at_browser_close
+    if self.get('_session_expiry') is None:
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 68, in get
+    return self._session.get(key, default)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 207, in _get_session
+    self._session_cache = self.load()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 35, in load
+    expire_date__gt=timezone.now()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 379, in get
+    num = len(clone)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 238, in __len__
+    self._fetch_all()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 1085, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 824, in execute_sql
+    sql, params = self.as_sql()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 376, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\where.py", line 79, in as_sql
+    sql, params = compiler.compile(child)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\sql\compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\lookups.py", line 155, in as_sql
+    lhs_sql, params = self.process_lhs(compiler, connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\lookups.py", line 148, in process_lhs
+    db_type = self.lhs.output_field.db_type(connection=connection)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\models\fields\__init__.py", line 629, in db_type
+    return connection.data_types[self.get_internal_type()] % data
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 185, in data_types
+    if self.features.supports_microsecond_precision:
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\features.py", line 54, in supports_microsecond_precision
+    return self.connection.mysql_version >= (5, 6, 4) and Database.version_info >= (1, 2, 5)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 369, in mysql_version
+    with self.temporary_connection() as cursor:
+  File "D:\Python\Python36\lib\contextlib.py", line 82, in __enter__
+    return next(self.gen)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 564, in temporary_connection
+    cursor = self.cursor()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 231, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 204, in _cursor
+    self.ensure_connection()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 199, in ensure_connection
+    self.connect()
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\base\base.py", line 171, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\pythoncode\godzilla_cmdb\venv\lib\site-packages\django\db\backends\mysql\base.py", line 265, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 706, in __init__
+    self.connect()
+  File "C:\Users\admin\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 963, in connect
+    raise exc
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on '118.89.18.234' (timed out)")

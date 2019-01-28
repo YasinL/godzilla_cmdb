@@ -10,7 +10,7 @@ from django.shortcuts import render,render_to_response,HttpResponse,HttpResponse
 from godzilla.models import RedisHost
 from godzilla.core.Log import logger
 from godzilla.handle.decorator_login import login_decorator
-
+from godzilla.core.RecordLog import RecordLog
 
 
 def cachelist(request):
@@ -40,29 +40,40 @@ def redislist(request):
 
 @login_decorator
 def redisadd(request):
+    Description = "添加缓存地址"
     if request.method == "POST":
         redis = request.body
         redisinfo = json.loads(redis)
         proxy_name  = redisinfo[0]["proxy_name"]
-        ip  = redisinfo[0]["ip"]
-        port  = redisinfo[0]["port"]
+        proxy_ip  = redisinfo[0]["proxy_ip"]
+        proxy_port  = redisinfo[0]["proxy_port"]
+        admin_ip  = redisinfo[0]["admin_ip"]
+        admin_port  = redisinfo[0]["admin_port"]
         typeid  = redisinfo[0]["typeid"]
         typename  = redisinfo[0]["typename"]
         owner  = redisinfo[0]["owner"]
         principal  = redisinfo[0]["principal"]
+        username = request.session.get('username')
+
         try:
-            redishost = RedisHost.objects.filter(redis_ip__exact=ip).filter(redis_port__exact=port)
+            redishost = RedisHost.objects.filter(redis_ip__exact=proxy_ip).filter(redis_port__exact=proxy_port)
             if  len(list(redishost)) == 0:
                 try:
-                    redistable = RedisHost.objects.create(redis_ip=ip,redis_port=port,proxy_name=proxy_name,
+                    redistable = RedisHost.objects.create(redis_ip=proxy_ip,redis_port=proxy_port,proxy_name=proxy_name,admin_addr=admin_ip,admin_port=admin_port,
                                                          typeid=typeid,typename=typename,project_owner=owner,project_principal=principal)
                     redistable.save()
 
-                    rediserror = "缓存添加成功"
+                    rediserror = "添加缓存 %s:%s 成功" % (proxy_ip,proxy_port)
+
+
+                    RecordLog(username=username, recordclass=Description, recordvalue=rediserror).saveecord()
 
                 except BaseException as e:
                     logger.error(e)
-                    rediserror = "缓存添加失败"
+                    rediserror = "添加缓存 %s:%s 失败" % (proxy_ip, proxy_port)
+
+                    RecordLog(username=username, recordclass=Description, recordvalue=rediserror).saveecord()
+
             else:
                 rediserror = "缓存地址已存在无需重复添加"
 
@@ -77,18 +88,27 @@ def redisadd(request):
 
 @login_decorator
 def redishostdel(request):
+    username = request.session.get('username')
+    Description = "删除缓存地址"
     if request.method == "POST":
         pass
     else:
-        rowid = request.GET["rowid"]
+        redis_ip = request.GET["redis_ip"]
+        redis_port = request.GET["redis_port"]
 
-        RedisHost.objects.filter(id=rowid).delete()
+        RedisHost.objects.filter(redis_ip__exact=redis_ip).filter(redis_port__exact=redis_port).delete()
+
+        recordvalue = "删除缓存地址 %s:%s 成功 " % (redis_ip,redis_port)
+        RecordLog(username=username, recordclass=Description, recordvalue=recordvalue).saveecord()
 
         return HttpResponseRedirect('/godzilla/platformconf/redislist')
 
 
 @login_decorator
 def redisupdate(request):
+
+    Description = "更新缓存地址"
+    username = request.session.get('username')
     if request.method == "POST":
         redis = request.body
         redisinfo = json.loads(redis)
@@ -106,14 +126,25 @@ def redisupdate(request):
                                                          typeid=typeid,typename=typename,project_owner=owner,project_principal=principal)
             rediserror = "缓存信息更新成功"
 
+
+            RecordLog(username=username, recordclass=Description, recordvalue=rediserror).saveecord()
+
         except BaseException as e:
             logger.error(e)
             rediserror = "缓存信息更新失败"
+            RecordLog(username=username, recordclass=Description, recordvalue=rediserror).saveecord()
 
         return HttpResponse(rediserror)
 
     else:
-        return  render_to_response('codis-add.html')
+        redisinfo = []
+        rowid = request.GET["rowid"]
+        redistable = RedisHost.objects.filter(id=rowid).values()
+
+        for redis in redistable:
+            redisinfo.append(redis)
+
+        return  render_to_response('codis-edit.html',{"redisinfo":redisinfo})
 
 
 @login_decorator

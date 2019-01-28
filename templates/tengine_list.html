@@ -22,17 +22,15 @@
   </head>
   
   <body>
-
+    <div class="x-nav">
+      <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+    </div>
     <div class="x-body">
 
       <xblock>
         <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
-        <button class="layui-btn" onclick="x_admin_show('添加缓存','./redisadd')"><i class="layui-icon"></i>添加</button>
-            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
-
-        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
-
-        <span class="x-right" style="line-height:40px">共有数据：88 条</span>
+        <button class="layui-btn" onclick="x_admin_show('添加tengine主机','./tenginehostadd')"><i class="layui-icon"></i>添加</button>
       </xblock>
       <table class="layui-table">
         <thead>
@@ -40,35 +38,28 @@
             <th>
               <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
             </th>
-            <th>ID</th>
-            <th>proxy_name</th>
-            <th>IP</th>
+            <th>主机IP</th>
             <th>端口</th>
-            <th>项目所属</th>
-            <th>负责人</th>
-            <th>类型</th>
             <th>操作</th>
         </thead>
         <tbody>
-        {% if redisip %}
-        {% for redis in redisip %}
+        {% if result %}
+        {% for results in result %}
 
           <tr>
             <td>
               <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
             </td>
-            <td>{{ redis.id }}</td>
-            <td>{{ redis.proxy_name }}</td>
-            <td>{{ redis.redis_ip }}</td>
-            <td>{{ redis.redis_port }}</td>
-            <td>{{ redis.project_owner }}</td>
-            <td>{{ redis.project_principal }}</td>
-            <td>{{ redis.typename }}</td>
+            <td>{{ results.host }}</td>
+            <td>{{ results.hostredisport }}</td>
            <td class="td-manage">
-              <a title="编辑"  onclick="x_admin_show('编辑','./redisupdate?rowid={{ redis.id }}')" href="javascript:;">
+             <a title="编辑"  onclick="x_admin_show('编辑','./tenginehostedit?hostip={{ results.host }}')" href="javascript:;">
+             <i class="layui-icon">&#xe628;<i>
+
+              <a title="编辑"  onclick="x_admin_show('编辑','./tenginehostupdate?hostip={{ results.host }}')" href="javascript:;">
                 <i class="layui-icon">&#xe642;</i>
               </a>
-              <a title="删除" onclick="member_del(this,'要删除的id')" href="./redishostdel?redis_ip={{ redis.redis_ip }}&redis_port={{ redis.redis_port }}">
+              <a title="删除" onclick="member_del(this,{{ results.host }})">
                 <i class="layui-icon">&#xe640;</i>
               </a>
             </td>
@@ -77,14 +68,15 @@
         {% endif %}
         </tbody>
       </table>
-      <div class="page">
+      <!--<div class="page">-->
         <div>
-          <a class="prev" href="">&lt;&lt;</a>
-          <a class="num" href="">1</a>
-          <span class="current">2</span>
-          <a class="next" href="">&gt;&gt;</a>
+          {{ pager_str|safe }}
+          <!--<a class="prev" href="">&lt;&lt;</a>-->
+          <!--<a class="num" href="">1</a>-->
+          <!--<span class="current">2</span>-->
+          <!--<a class="next" href="">&gt;&gt;</a>-->
         </div>
-      </div>
+      <!--</div>-->
 
     </div>
     <script>
@@ -127,38 +119,40 @@
       }
 
       /*用户-删除*/
-      function member_del(obj,id){
-          layer.confirm('确认要删除吗？',function(index){
-              //
-              // var rowid = document.getElementById(rowid).textContent;
-              // var host = window.location.host;
-              // var urltest = 'http://' + host + '/godzilla/platformconf/redishostdel';
-              //
-              // $.ajax({
-              //     type: "GET",
-              //     url: urltest,
-              //     datatype: "json",
-              //     data: rowid,
-              //     success: function (data) {
-              //         layer.alert(data, {icon: 6}, function () {
-              //             // 获得frame索引
-              //             var index = parent.layer.getFrameIndex(window.name);
-              //             //关闭当前frame
-              //             parent.layer.close(index);
-              //         });
-              //     },
-              //     error: function (data) {
-              //         layer.alert(data, {icon: 6}, function () {
-              //             // 获得frame索引
-              //             var index = parent.layer.getFrameIndex(window.name);
-              //             //关闭当前frame
-              //             parent.layer.close(index);
-              //         });
-              //     }
-              // });
+      function member_del(obj, id) {
+          layer.confirm('确认要删除吗？', function (index) {
 
-              $(obj).parents("tr").remove();
-              layer.msg('已删除!',{icon:1,time:1000});
+              var hostip = id;
+              var host = window.location.host;
+              var urltest = 'http://' + host + '/godzilla/platformconf/tenginehostdel?hostip=' + hostip;
+
+              $.ajax({
+                  type: "GET",
+                  url: urltest,
+                  datatype: "json",
+                  // data:phone,
+                  success: function (data) {
+                      layer.msg(data, {icon: 6}, function () {
+                          // 获得frame索引
+                          $(obj).parents("tr").remove();
+                          var index = parent.layer.getFrameIndex(window.name);
+                          //关闭当前frame
+                          parent.layer.close(index);
+
+                      });
+
+
+                  },
+                  error: function (data) {
+                      layer.alert(data, {icon: 6}, function () {
+                          // 获得frame索引
+                          var index = parent.layer.getFrameIndex(window.name);
+                          //关闭当前frame
+                          parent.layer.close(index);
+                      });
+                  }
+
+              });
           });
       }
 

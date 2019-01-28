@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^cachemanager/redis_del', views.redis_del, name="redis_del"),
     url(r'^cachemanager/matchingdel', views.matchingdel, name="matchingdel"),
     url(r'^cachemanager/graynumber', views.graylist, name="graynumber"),
+
     url(r'^cachemanager/grayadd', views.grayadd, name="grayadd"),
     url(r'^cachemanager/delphone', views.delphone, name="delphone"),
     url(r'^cachemanager/redisphonecheckstatus', views.redisphonecheckstatus, name="redisphonecheckstatus"),
@@ -39,6 +40,15 @@ urlpatterns = [
     url(r'^hostmanager/hostupdate', views.hostupdate, name="hostupdate"),
 
     url(r'^permanager/useradd',views.useradd,name="useradd"),
+    url(r'^platformconf/tenginehost$',views.tenginehostlist,name="tenginehostlist"),
+    url(r'^platformconf/tenginehostadd',views.tenginehostadd,name="tenginehostadd"),
+    url(r'^platformconf/tenginehostdel',views.tenginehostdel,name="tenginehostdel"),
+    url(r'^platformconf/tenginehostupdate',views.tenginehostupdate,name="tenginehostupdate"),
+    url(r'^platformconf/tenginehostedit',views.tenginehostedit,name="tenginehostedit"),
+
+
+    url(r'^platformconf/tenginehostedit',views.tenginehostedit,name="tenginehostedit"),
+    url(r'^recordlist/recordlist',views.recordlist,name="recordlist"),
 
 
     url(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATIC_ROOT }),
