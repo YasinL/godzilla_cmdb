@@ -52,9 +52,9 @@
             <td>{{ redis.typename }}</td>
 
             <td>
-                <button class="layui-btn  layui-btn-radius layui-btn-normal layui-btn-sm" onclick="x_admin_show('添加缓存','./redis_get?redisip={{ redis.redis_ip }}')">查 &nbsp;&nbsp; 询</button>
-                <button class="layui-btn  layui-btn-radius layui-btn-normal layui-btn-sm" onclick="x_admin_show('添加缓存','./redis_del?redisip={{ redis.redis_ip }}')">精确删除</button>
-                <button class="layui-btn  layui-btn-radius layui-btn-normal layui-btn-sm" onclick="x_admin_show('添加缓存','./matchingdel?redisip={{ redis.redis_ip }}')">模糊删除</button>
+                <button class="layui-btn  layui-btn-radius layui-btn-normal layui-btn-sm" onclick="x_admin_show('添加缓存','./redis_get?redisip={{ redis.redis_ip }}&redisport={{ redis.redis_port }}')">查 &nbsp;&nbsp; 询</button>
+                <button class="layui-btn  layui-btn-radius layui-btn-normal layui-btn-sm" onclick="x_admin_show('添加缓存','./redis_del?redisip={{ redis.redis_ip }}&redisport={{ redis.redis_port }}')">精确删除</button>
+                <button class="layui-btn  layui-btn-radius layui-btn-normal layui-btn-sm" onclick="x_admin_show('添加缓存','./matchingdel?redisip={{ redis.redis_ip }}&redisport={{ redis.redis_port }}')">模糊删除</button>
             </td>
            <!--<td class="td-manage">-->
               <!--<a title="编辑"  onclick="x_admin_show('编辑','./redisedit?redisip={{ redis.redis_ip }}')" href="javascript:;">-->

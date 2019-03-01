@@ -27,9 +27,9 @@
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
     </div>
     <div class="x-body">
+
       <xblock>
-        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
-        <button class="layui-btn" onclick="x_admin_show('添加角色','./roleadd')"><i class="layui-icon"></i>添加</button>
+        <button class="layui-btn" onclick="x_admin_show('添加tengine主机','./compile_config_add')"><i class="layui-icon"></i>添加</button>
       </xblock>
       <table class="layui-table">
         <thead>
@@ -37,47 +37,51 @@
             <th>
               <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
             </th>
-            <th>ID</th>
-            <th>角色名</th>
-            <th>操作</th>
+            <th>名称</th>
+            <th>路径</th>
         </thead>
         <tbody>
+        <tr>
+          <td>jdk,maven</td>
+          <td></td>
+          <td></td>
+        </tr>
+
 
         {% if result %}
         {% for results in result %}
+
           <tr>
             <td>
               <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
             </td>
-            <td>{{ results.roleid }}</td>
-            <td>{{ results.Rolename }}</td>
-            <td class="td-manage">
-              <!--<a title="编辑"  onclick="x_admin_show('编辑','role-add.html')" href="javascript:;">-->
-                <!--<i class="layui-icon">&#xe642;</i>-->
-              <!--</a>-->
-              <a title="删除" onclick="member_del(this,{{ results.roleid }})" href="javascript:;">
+            <td>{{ results.varname }}</td>
+            <td>{{ results.varpath }}</td>
+           <td class="td-manage">
+             <a title="编辑"  onclick="x_admin_show('编辑','./compile_config_update?varnameid={{ results.varnameid }}')" href="javascript:;">
+             <i class="layui-icon">&#xe628;<i>
+
+              <a title="删除" onclick="member_del(this,{{ results.varnameid }})">
                 <i class="layui-icon">&#xe640;</i>
               </a>
             </td>
           </tr>
-                {% endfor%}
+        {% endfor%}
         {% endif %}
         </tbody>
       </table>
-      <div class="page">
-
-      </div>
 
     </div>
     <script>
+
 
       /*用户-删除*/
       function member_del(obj, id) {
           layer.confirm('确认要删除吗？', function (index) {
 
-              var permissionid = id;
+              var hostip = id;
               var host = window.location.host;
-              var urltest = 'http://' + host + '/godzilla/permanager/roledel?permissionid=' + permissionid;
+              var urltest = 'http://' + host + '/godzilla/platformconf/tenginehostdel?hostip=' + hostip;
 
               $.ajax({
                   type: "GET",
@@ -122,7 +126,6 @@
         });
       }
     </script>
-
   </body>
 
 </html>

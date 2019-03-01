@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon"/>
+    <link rel="stylesheet" href="{% static 'css/font.css'%}">
+    <link rel="stylesheet" href="{% static 'css/xadmin.css'%}">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'lib/layui/layui.js'%}" charset="utf-8"></script>
+    <script type="text/javascript" src="{% static 'js/xadmin.js'%}"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+
+
+<div class="x-nav">
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+</div>
+<div class="x-body">
+    <div>
+
+    <div class="order">
+        <span class="line1"></span>
+        <span class="txt" id="maven">Maven</span>
+        <span class="line"></span>
+    </div>
+
+
+    <div class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label-maven">
+                <span class="x-red">*</span>Default settings
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="mavensetting" name="mavensetting"
+                       class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">
+                <span class="x-red">*</span>Maven setting.xml
+            </div>
+        </div>
+
+                    <div class="layui-form-item">
+                <label  class="layui-form-label-maven">
+                    <span class="x-red">*</span>Maven
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="mavenname" name="mavenname"
+                           autocomplete="off" class="layui-input">
+                </div>
+
+            </div>
+
+
+                    <div class="layui-form-item">
+                <label  class="layui-form-label-maven">
+                    <span class="x-red">*</span> Maven 路径
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="mavenpath" name="mavenpath"
+                           autocomplete="off" class="layui-input">
+                </div>
+
+            </div>
+
+    </div>
+</div>
+
+    <div>
+
+        <div class="order">
+            <span class="line1"></span>
+            <span class="txt" id="jdk">JDK</span>
+            <span class="line"></span>
+        </div>
+
+        <div class="layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label-maven">
+                    <span class="x-red">*</span>JDK
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="jdkname" name="jdkname"
+                           autocomplete="off" class="layui-input">
+                </div>
+
+            </div>
+            <div class="layui-form-item">
+                <label  class="layui-form-label-maven">
+                    <span class="x-red">*</span>JDK 路径
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="jdkpath" name="jdkpath"
+                           autocomplete="off" class="layui-input">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div>
+
+    <div class="order">
+        <span class="line1"></span>
+        <span class="txt" id="git">Git</span>
+        <span class="line"></span>
+    </div>
+
+
+        <div class="layui-form">
+            <div class="layui-form-item">
+                <label  class="layui-form-label-maven">
+                    <span class="x-red">*</span>Git
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="gitname" name="gitname"
+                           autocomplete="off" class="layui-input">
+                </div>
+
+            </div>
+            <div class="layui-form-item">
+                <label  class="layui-form-label-maven">
+                    <span class="x-red">*</span>Git 路径
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="gitpath" name="gitpath"
+                           autocomplete="off" class="layui-input">
+                </div>
+
+            </div>
+        </div>
+                      <div class="layui-form-item">
+              <label  class="layui-form-label">
+              </label>
+              <button  class="layui-btn" lay-filter="add" lay-submit="" onclick="globaltool()">
+                  保存
+              </button>
+          </div>
+</div>
+
+
+
+</div>
+
+
+
+</div>
+<script>
+
+        function globaltool() {
+            var params = [];
+            var maven = document.getElementById("maven").textContent;
+            var jdk = document.getElementById("jdk").textContent;
+            var git = document.getElementById("git").textContent;
+            var mavennname = document.getElementById("mavennname").value;
+            var mavenpath = document.getElementById("mavenpath").value;
+            var jdkname = document.getElementById("jdkname").value;
+            var jdkpath = document.getElementById("jdkpath").value;
+            var gitname = document.getElementById("gitname").value;
+            var gitpath = document.getElementById("gitpath").value;
+
+            alert(roleid);
+            var userdict = {
+                "maven":maven,"jdk":jdk,"git":git,
+                "mavennname":mavennname,"mavenpath":mavenpath,
+                "jdkname":jdkname,"jdkpath":jdkpath,"gitname":gitname,"gitpath":gitpath
+            };
+            params.push(userdict);
+            var userinfo = JSON.stringify(params);
+            var host = window.location.host;
+            var urltest = 'http://' + host + '/godzilla/platformconf/golabaltool';
+
+           $.ajax({
+               type:"POST",
+               url:urltest,
+               datatype:"json",
+               data:userinfo,
+               success: function (data) {
+                     layer.alert(data, {icon: 6},function () {
+                         // 获得frame索引
+                         var index = parent.layer.getFrameIndex(window.name);
+                         //关闭当前frame
+                         parent.layer.close(index);
+                     });
+               },
+                error: function (data) {
+                    layer.alert(data, {icon: 6}, function () {
+                        // 获得frame索引
+                        var index = parent.layer.getFrameIndex(window.name);
+                        //关闭当前frame
+                        parent.layer.close(index);
+                    });
+                }
+
+           });
+        }
+
+
+</script>
+</body>
+
+</html>
