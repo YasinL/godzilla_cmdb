@@ -32,24 +32,59 @@ def check_permiss(username):
     return memuidlist
 
 
+class RoleOper():
+    def __init__(self,permissionudnum,rolename):
+        self.permissionudnum =permissionudnum
+        self.rolename = rolename
 
-def addrole(permissionudnum,rolename):
-    roleidnum = "1" + "".join(map(lambda x:random.choice(string.digits), range(7)))
-    try:
-        roletable = role.objects.create(roleid=roleidnum, Rolename=rolename)
-        for permissionid in permissionudnum:
-            permissiontable = permission.objects.create(permission_id=permissionid,roleid=roleidnum)
-            permissiontable.save()
-        roletable.save()
+    def addrole(self):
+        roleidnum = "1" + "".join(map(lambda x:random.choice(string.digits), range(7)))
+        try:
+            roletable = role.objects.create(roleid=roleidnum, Rolename=self.rolename)
+            roletable.save()
 
-        addroleerror = "角色添加成功"
+            for permissionid in self.permissionudnum:
+                permissiontable = permission.objects.create(permission_id=permissionid,roleid=roleidnum)
+                permissiontable.save()
+
+            addroleerror = "角色添加成功"
 
 
-    except BaseException as e:
-        logger.error(e)
-        addroleerror = "角色添加失败"
+        except BaseException as e:
+            logger.error(e)
+            addroleerror = "角色添加失败"
 
-    return addroleerror
+        return addroleerror
+
+
+
+    def update(self):
+        try:
+            role.objects.filter(roleid__exact=self.permissionudnum).update(Rolename=self.rolename)
+
+            addroleerror = "角色更新成功"
+
+
+        except BaseException as e:
+            logger.error(e)
+            addroleerror = "角色更新失败"
+
+        return addroleerror
+
+    @classmethod
+    def roledel(self,permissionid):
+        try:
+            role.objects.filter(roleid__exact=permissionid).delete()
+            permission.objects.filter(roleid__exact=permissionid).delete()
+
+            addroleerror = "角色删除成功"
+
+
+        except BaseException as e:
+            logger.error(e)
+            addroleerror = "角色删除失败"
+
+        return addroleerror
 
 
 

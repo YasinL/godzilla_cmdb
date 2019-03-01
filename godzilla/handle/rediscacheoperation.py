@@ -33,7 +33,8 @@ def redis_get(request):
 
     else:
         redisip = request.GET["redisip"]
-        redistable = RedisHost.objects.filter(redis_ip=redisip).values()
+        redis_port = request.GET["redisport"]
+        redistable = RedisHost.objects.filter(redis_ip=redisip).filter(redis_port__exact=redis_port).values()
 
         for redis in redistable:
             redisinfo.append(redis)
@@ -64,7 +65,8 @@ def redis_del(request):
 
     else:
         redisip = request.GET["redisip"]
-        redistable = RedisHost.objects.filter(redis_ip=redisip).values()
+        redis_port = request.GET["redisport"]
+        redistable = RedisHost.objects.filter(redis_ip=redisip).filter(redis_port__exact=redis_port).values()
 
         for redis in redistable:
             redisinfo.append(redis)
@@ -94,7 +96,8 @@ def matchingdel(request):
 
     else:
         redisip = request.GET["redisip"]
-        redistable = RedisHost.objects.filter(redis_ip=redisip).values()
+        redis_port = request.GET["redisport"]
+        redistable = RedisHost.objects.filter(redis_ip=redisip).filter(redis_port__exact=redis_port).values()
 
         for redis in redistable:
             redisinfo.append(redis)

@@ -6,8 +6,11 @@ from godzilla.handle.login import login
 from  godzilla.handle.permission import check_permiss
 from  godzilla.handle.role import rolemanager
 from  godzilla.handle.role import roleadd
+from  godzilla.handle.role import roledel
 from  godzilla.handle.usermanager import userlist
 from  godzilla.handle.usermanager import useradd
+from  godzilla.handle.usermanager import userupdate
+from  godzilla.handle.usermanager import userdel
 from godzilla.handle.rediscacheoperation import redis_get
 from godzilla.handle.rediscacheoperation import redis_del
 from godzilla.handle.rediscacheoperation import matchingdel
@@ -26,6 +29,9 @@ from  godzilla.handle.HostAssets import hostedit
 from  godzilla.handle.HostAssets import hostupdate
 
 
+from godzilla.core.GlobalTool.Configuration import golabaltoolconf
+
+
 
 
 from godzilla.handle.gray import graylist
@@ -41,6 +47,11 @@ from  godzilla.handle.tenginehost import tenginehostdel
 from  godzilla.handle.tenginehost import tenginehostupdate
 from  godzilla.handle.tenginehost import tenginehostedit
 
+
+from godzilla.handle.compile import compile_config
+from godzilla.handle.compile import compile_config_update
+from godzilla.handle.compile import compile_config_add
+from godzilla.handle.compile import compile_config_del
 
 
 

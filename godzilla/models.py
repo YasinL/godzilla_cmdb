@@ -30,10 +30,19 @@ class ansible_host(models.Model):
     project_owner = models.CharField(max_length=50, null=True)
     idc_name = models.CharField(max_length=50, null=True)
     ansible_groupid = models.CharField(max_length=20, null=True)
+    spaceid = models.CharField(max_length=20, null=True)
+
+
 
 class ansible_group(models.Model):
     hostgroup = models.CharField(max_length=200,null=True)
     ansible_groupid = models.CharField(max_length=200, null=True)
+
+
+class hostspace(models.Model):
+    spaceid = models.CharField(max_length=20, null=True)
+    spacename = models.CharField(max_length=20, null=True)
+
 
 
 class memuid(models.Model):
@@ -93,3 +102,19 @@ class RecordLogTable(models.Model):
     recordclass = models.CharField(max_length=150)
     recordvalue = models.TextField(max_length=10000)
     logtime = models.DateTimeField(default=datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+
+
+
+
+class compile_conf(models.Model):
+    varnameid =  models.CharField(max_length=50)
+    varname = models.CharField(max_length=50)
+    varpath = models.CharField(max_length=200)
+
+
+
+
+class globaltool(models.Model):
+    type = models.CharField(max_length=30)
+    varname = models.CharField(max_length=50,null=True)
+    varpath  = models.CharField(max_length=200,null=True)

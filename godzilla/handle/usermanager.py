@@ -15,6 +15,69 @@ from godzilla.handle.decorator_login import login_decorator
 
 
 
+
+
+class UserOper():
+    def __init__(self,username,mobile,email,passwd,roleid):
+        self.username = username
+        self.mobile = mobile
+        self.email = email
+        self.passwd = passwd
+        self.roleid = roleid
+
+
+    def useradd(self):
+        try:
+            usertable = users.objects.create_user(
+                username=self.username,
+                mobile=self.mobile,
+                email=self.email,
+                password=self.passwd,
+                roleid=self.roleid
+            )
+
+            usertable.save()
+
+            useradderror = "用户添加成功"
+        except BaseException as e:
+            logger.error(e)
+            useradderror = "用户添加失败"
+
+        return useradderror
+
+
+    def userupdate(self):
+        try:
+            usertable = users.objects.filter(username=self.username).update(
+                mobile=self.mobile,
+                email=self.email,
+                password=self.passwd,
+                roleid=self.roleid
+            )
+            usertable.save()
+
+            usererror = "用户更新成功"
+        except BaseException as e:
+            logger.error(e)
+            usererror = "用户更新失败"
+
+        return  HttpResponse(usererror)
+
+
+    @classmethod
+    def userdel(self,username):
+        try:
+            users.objects.filter(username=username).delete()
+            userdelerror = "用户删除成功"
+        except BaseException as e:
+            logger.error(e)
+            userdelerror = "用户删除失败"
+
+        return  userdelerror
+
+
+
+
 '''登录验证
 用户添加列表
 '''
@@ -47,16 +110,11 @@ def useradd(request):
         email  = userinfo[0]["email"]
         passwd  = userinfo[0]["pass"]
         roleid  = userinfo[0]["roleid"]
-        try:
-            usertable = users.objects.create_user(username=username, mobile=mobile, email=email, password=passwd,roleid=roleid)
-            usertable.save()
 
-            usererror = "用户添加成功"
-        except BaseException as e:
-            logger.error(e)
-            usererror = "用户添加失败"
 
-        return  HttpResponse(usererror)
+        useradd  = UserOper(username=username, mobile=mobile, email=email,passwd=passwd,roleid=roleid).useradd()
+
+        return  HttpResponse(useradd)
 
 
 
@@ -66,3 +124,62 @@ def useradd(request):
         for roles in roletable:
             roleid.append(roles)
         return render_to_response('admin-add.html', {'roleid': roleid})
+
+
+
+
+
+'''登录验证
+用户更新  （ajax 请求）
+'''
+@login_decorator
+def userupdate(request):
+    roleid = []
+    if request.method == "POST":
+        userbody = request.body
+        userinfo = json.loads(userbody)
+        username  = userinfo[0]["user"]
+        mobile  = userinfo[0]["mobile"]
+        email  = userinfo[0]["email"]
+        passwd  = userinfo[0]["pass"]
+        roleid  = userinfo[0]["roleid"]
+
+        userupdate  = UserOper(username=username, mobile=mobile, email=email,passwd=passwd,roleid=roleid).userupdate()
+
+
+        return  HttpResponse(userupdate)
+
+
+
+    else:
+        userid = request.GET["userid"]
+        userinfolist = []
+        roletable = role.objects.all().values()
+        for roles in roletable:
+            roleid.append(roles)
+
+        userinfo = users.objects.filter(id__exact=userid).values()
+        for user in userinfo:
+            userinfolist.append(user)
+
+
+        return render_to_response('admin-edit.html', {'roleid':roleid,"userinfo":userinfolist})
+
+
+
+
+'''登录验证
+用户删除  （ajax 请求）
+'''
+@login_decorator
+def userdel(request):
+    roleid = []
+    if request.method == "POST":
+        pass
+
+
+    else:
+        username = request.GET["username"]
+        userdel = UserOper.userdel(username)
+
+        return HttpResponse(userdel)
